@@ -9,8 +9,8 @@
 [0m[[0m[0mdebug[0m] [0m[0m> Exec(onFailure loadFailed, None, None)[0m
 [0m[[0m[0mdebug[0m] [0m[0m> Exec(loadp, None, None)[0m
 [0m[[0m[0minfo[0m] [0m[0mwelcome to sbt 1.7.1 (Oracle Corporation Java 11.0.5)[0m
-[0m[[0m[0mdebug[0m] [0m[0m      Load.loadUnit: plugins took 107.7385ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m      Load.loadUnit: defsScala took 0.457416ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.loadUnit: plugins took 419.432834ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.loadUnit: defsScala took 3.012166ms[0m
 [0m[[0m[0mdebug[0m] [0m[0m[Loading] Scanning directory /Users/doruntinemaloku/.sbt/1.0/plugins[0m
 [0m[[0m[0mdebug[0m] [0m[0m[Loading] Found non-root projects [0m
 [0m[[0m[0mdebug[0m] [0m[0m[Loading] Done in /Users/doruntinemaloku/.sbt/1.0/plugins, returning: ()[0m
@@ -27,27 +27,27 @@
 [0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))[0m
 [0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))[0m
 [0m[[0m[0mdebug[0m] [0m[0m  :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)[0m
-[0m[[0m[0mdebug[0m] [0m[0mPlugins.deducer#function took 21.863041 ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m          Load.resolveProject(global-plugins) took 44.9975ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m        Load.loadTransitive: finalizeProject(Project(id global-plugins, base: /Users/doruntinemaloku/.sbt/1.0/plugins, plugins: List(<none>))) took 99.449541ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mPlugins.deducer#function took 34.339833 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m          Load.resolveProject(global-plugins) took 75.496583ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m        Load.loadTransitive: finalizeProject(Project(id global-plugins, base: /Users/doruntinemaloku/.sbt/1.0/plugins, plugins: List(<none>))) took 155.83475ms[0m
 [0m[[0m[0mdebug[0m] [0m[0m[Loading] Done in /Users/doruntinemaloku/.sbt/1.0/plugins, returning: (global-plugins)[0m
-[0m[[0m[0mdebug[0m] [0m[0m      Load.loadUnit: loadedProjectsRaw took 200.6605ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m      Load.loadUnit: cleanEvalClasses took 0.24925ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m    Load.loadUnit(file:/Users/doruntinemaloku/.sbt/1.0/plugins/, ...) took 317.819542ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m  Load.apply: load took 5859.239542ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m  Load.apply: resolveProjects took 23.762583ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m  Load.apply: finalTransforms took 162.665208ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m  Load.apply: config.delegates took 14.2745ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m  Load.apply: Def.make(settings)... took 1414.897208ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m  Load.apply: structureIndex took 239.7905ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m  Load.apply: mkStreams took 1.075375ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.loadUnit: loadedProjectsRaw took 222.266958ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.loadUnit: cleanEvalClasses took 0.2905ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Load.loadUnit(file:/Users/doruntinemaloku/.sbt/1.0/plugins/, ...) took 671.944167ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Load.apply: load took 6343.600334ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Load.apply: resolveProjects took 28.030333ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Load.apply: finalTransforms took 274.463542ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Load.apply: config.delegates took 12.31125ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Load.apply: Def.make(settings)... took 2396.075417ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Load.apply: structureIndex took 303.523458ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Load.apply: mkStreams took 4.030458ms[0m
 [0m[[0m[0minfo[0m] [0m[0mloading global plugins from /Users/doruntinemaloku/.sbt/1.0/plugins[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
-[0m[[0m[0mdebug[0m] [0m[0mLoad.defaultLoad until apply took 10130.701208ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m          Load.loadUnit: plugins took 71.080375ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m          Load.loadUnit: defsScala took 0.005459ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.defaultLoad until apply took 17119.158833ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m          Load.loadUnit: plugins took 70.496625ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m          Load.loadUnit: defsScala took 0.006792ms[0m
 [0m[[0m[0mdebug[0m] [0m[0m[Loading] Scanning directory /Users/doruntinemaloku/Documents/Backend_API_Excersise/project[0m
-[0m[[0m[0mdebug[0m] [0m[0m            Load.loadUnit: mkEval took 13.619542ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m            Load.loadUnit: mkEval took 99.418584ms[0m
 [0m[[0m[0mdebug[0m] [0m[0m[Loading] Found non-root projects [0m
 [0m[[0m[0mdebug[0m] [0m[0m[Loading] Done in /Users/doruntinemaloku/Documents/Backend_API_Excersise/project, returning: ()[0m
 [0m[[0m[0mdebug[0m] [0m[0mdeducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))[0m
@@ -63,27 +63,27 @@
 [0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))[0m
 [0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))[0m
 [0m[[0m[0mdebug[0m] [0m[0m  :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)[0m
-[0m[[0m[0mdebug[0m] [0m[0mPlugins.deducer#function took 6.997417 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mPlugins.deducer#function took 12.154875 ms[0m
 [0m[[0m[0minfo[0m] [0m[0mloading settings for project backend_api_excersise-build from plugins.sbt ...[0m
-[0m[[0m[0mdebug[0m] [0m[0m              Load.resolveProject(backend_api_excersise-build) took 22.205584ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m            Load.loadTransitive: finalizeProject(Project(id backend_api_excersise-build, base: /Users/doruntinemaloku/Documents/Backend_API_Excersise/project, plugins: List(<none>))) took 31.642042ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m              Load.resolveProject(backend_api_excersise-build) took 15.22875ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m            Load.loadTransitive: finalizeProject(Project(id backend_api_excersise-build, base: /Users/doruntinemaloku/Documents/Backend_API_Excersise/project, plugins: List(<none>))) took 29.343417ms[0m
 [0m[[0m[0mdebug[0m] [0m[0m[Loading] Done in /Users/doruntinemaloku/Documents/Backend_API_Excersise/project, returning: (backend_api_excersise-build)[0m
-[0m[[0m[0mdebug[0m] [0m[0m          Load.loadUnit: loadedProjectsRaw took 290.534667ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m          Load.loadUnit: cleanEvalClasses took 10.672ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m        Load.loadUnit(file:/Users/doruntinemaloku/Documents/Backend_API_Excersise/project/, ...) took 375.737167ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: load took 383.727583ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: resolveProjects took 0.7565ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: finalTransforms took 47.264833ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: config.delegates took 3.455333ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: Def.make(settings)... took 508.289291ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: structureIndex took 102.272ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: mkStreams took 0.02125ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m          Load.loadUnit: loadedProjectsRaw took 433.45725ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m          Load.loadUnit: cleanEvalClasses took 9.149917ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m        Load.loadUnit(file:/Users/doruntinemaloku/Documents/Backend_API_Excersise/project/, ...) took 515.694875ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: load took 525.117792ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: resolveProjects took 3.581042ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: finalTransforms took 41.12825ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: config.delegates took 3.135875ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: Def.make(settings)... took 514.900958ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: structureIndex took 181.534458ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.apply: mkStreams took 0.008708ms[0m
 [0m[[0m[0minfo[0m] [0m[0mloading project definition from /Users/doruntinemaloku/Documents/Backend_API_Excersise/project[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
-[0m[[0m[0mdebug[0m] [0m[0m    Load.loadUnit: plugins took 3002.369667ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m    Load.loadUnit: defsScala took 0.004125ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Load.loadUnit: plugins took 3716.149875ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Load.loadUnit: defsScala took 0.004834ms[0m
 [0m[[0m[0mdebug[0m] [0m[0m[Loading] Scanning directory /Users/doruntinemaloku/Documents/Backend_API_Excersise[0m
-[0m[[0m[0mdebug[0m] [0m[0m      Load.loadUnit: mkEval took 2.11725ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.loadUnit: mkEval took 3.783417ms[0m
 [0m[[0m[0mdebug[0m] [0m[0m[Loading] Found root project root w/ remaining [0m
 [0m[[0m[0mdebug[0m] [0m[0mdeducing auto plugins based on known facts Set(Atom(play.sbt.PlayJava), Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))[0m
 [0m[[0m[0mdebug[0m] [0m[0mClause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))[0m
@@ -169,21 +169,21 @@
 [0m[[0m[0mdebug[0m] [0m[0mClause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(com.typesafe.sbt.jse.SbtJsEngine)))[0m
 [0m[[0m[0mdebug[0m] [0m[0mClause(Atom(com.typesafe.sbt.jse.SbtJsEngine),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))))[0m
 [0m[[0m[0mdebug[0m] [0m[0m  :: deduced result: Matched(sbt.plugins.CorePlugin,play.sbt.PlayJava,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,play.sbt.PlayWeb,play.twirl.sbt.SbtTwirl,sbt.plugins.JvmPlugin,play.sbt.PlayService,play.sbt.PlayFilters,play.sbt.PlayLayoutPlugin,play.sbt.routes.RoutesCompiler,com.typesafe.sbt.jse.SbtJsTask,com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging,sbt.plugins.SemanticdbPlugin,sbt.plugins.JUnitXmlReportPlugin,play.sbt.PlayLogback,sbt.plugins.MiniDependencyTreePlugin,com.typesafe.sbt.jse.SbtJsEngine,play.sbt.PlayAkkaHttpServer,com.typesafe.sbt.web.SbtWeb,com.typesafe.sbt.packager.archetypes.JavaAppPackaging,com.typesafe.sbt.packager.rpm.RpmPlugin,com.typesafe.sbt.packager.archetypes.scripts.BashStartScriptPlugin,com.typesafe.sbt.packager.windows.WindowsPlugin,com.typesafe.sbt.packager.archetypes.scripts.BatStartScriptPlugin,com.typesafe.sbt.packager.docker.DockerPlugin,com.typesafe.sbt.packager.debian.DebianPlugin,com.typesafe.sbt.packager.universal.UniversalPlugin,com.typesafe.sbt.packager.linux.LinuxPlugin,com.typesafe.sbt.SbtNativePackager)[0m
-[0m[[0m[0mdebug[0m] [0m[0mPlugins.deducer#function took 29.307916 ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mPlugins.deducer#function took 68.373292 ms[0m
 [0m[[0m[0minfo[0m] [0m[0mloading settings for project root from build.sbt ...[0m
-[0m[[0m[0mdebug[0m] [0m[0m        Load.resolveProject(root) took 110.957375ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m      Load.loadTransitive: finalizeProject(Project(id root, base: /Users/doruntinemaloku/Documents/Backend_API_Excersise, plugins: List(play.sbt.PlayJava))) took 143.622ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m        Load.resolveProject(root) took 502.832708ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m      Load.loadTransitive: finalizeProject(Project(id root, base: /Users/doruntinemaloku/Documents/Backend_API_Excersise, plugins: List(play.sbt.PlayJava))) took 580.251542ms[0m
 [0m[[0m[0mdebug[0m] [0m[0m[Loading] Done in /Users/doruntinemaloku/Documents/Backend_API_Excersise, returning: (root)[0m
-[0m[[0m[0mdebug[0m] [0m[0m    Load.loadUnit: loadedProjectsRaw took 271.339792ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m    Load.loadUnit: cleanEvalClasses took 6.004584ms[0m
-[0m[[0m[0mdebug[0m] [0m[0m  Load.loadUnit(file:/Users/doruntinemaloku/Documents/Backend_API_Excersise/, ...) took 3282.043083ms[0m
-[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: load took 3290.516583ms[0m
-[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: resolveProjects took 0.384625ms[0m
-[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: finalTransforms took 28.479958ms[0m
-[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: config.delegates took 3.3675ms[0m
-[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: Def.make(settings)... took 292.76575ms[0m
-[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: structureIndex took 46.202875ms[0m
-[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: mkStreams took 0.004334ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Load.loadUnit: loadedProjectsRaw took 784.914625ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Load.loadUnit: cleanEvalClasses took 2.103125ms[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Load.loadUnit(file:/Users/doruntinemaloku/Documents/Backend_API_Excersise/, ...) took 4506.5445ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: load took 4523.833834ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: resolveProjects took 0.628208ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: finalTransforms took 57.485791ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: config.delegates took 6.92425ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: Def.make(settings)... took 1129.919667ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: structureIndex took 165.2695ms[0m
+[0m[[0m[0mdebug[0m] [0m[0mLoad.apply: mkStreams took 0.01575ms[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  __              __[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  \ \     ____   / /____ _ __  __[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m   \ \   / __ \ / // __ `// / / /[0m[0m
@@ -204,6 +204,17 @@
 [0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / run[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.13/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.13/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
 [0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m

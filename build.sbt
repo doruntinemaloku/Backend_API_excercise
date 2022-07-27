@@ -7,8 +7,13 @@ lazy val root = (project in file("."))
   .settings(
     name := """Backend_API_Excersise""",
     libraryDependencies ++= Seq(
-      guice
+      javaJdbc,
+      guice,
+      ehcache,
+      javaJdbc,
+      "org.mongodb" % "mongodb-driver-sync" % "4.3.0",
+      "com.auth0" % "java-jwt" % "3.3.0"
     )
   )
 
-libraryDependencies += "com.auth0" % "java-jwt" % "3.3.0"
+
