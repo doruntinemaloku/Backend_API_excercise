@@ -10,3 +10,5 @@ lazy val root = (project in file("."))
       guice
     )
   )
+
+libraryDependencies += "com.auth0" % "java-jwt" % "3.3.0"

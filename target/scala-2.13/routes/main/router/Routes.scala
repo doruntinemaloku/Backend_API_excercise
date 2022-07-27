@@ -13,25 +13,25 @@ import _root_.play.libs.F
 
 class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
-  // @LINE:6
-  HomeController_0: controllers.HomeController,
-  // @LINE:9
-  Assets_1: controllers.Assets,
+  // @LINE:8
+  Assets_0: controllers.Assets,
+  // @LINE:11
+  BackendAPI_Controller_1: javax.inject.Provider[io.backend.api.controllers.BackendAPI_Controller],
   val prefix: String
 ) extends GeneratedRouter {
 
    @javax.inject.Inject()
    def this(errorHandler: play.api.http.HttpErrorHandler,
-    // @LINE:6
-    HomeController_0: controllers.HomeController,
-    // @LINE:9
-    Assets_1: controllers.Assets
-  ) = this(errorHandler, HomeController_0, Assets_1, "/")
+    // @LINE:8
+    Assets_0: controllers.Assets,
+    // @LINE:11
+    BackendAPI_Controller_1: javax.inject.Provider[io.backend.api.controllers.BackendAPI_Controller]
+  ) = this(errorHandler, Assets_0, BackendAPI_Controller_1, "/")
 
   def withPrefix(addPrefix: String): Routes = {
     val prefix = play.api.routing.Router.concatPrefix(addPrefix, this.prefix)
     router.RoutesPrefix.setPrefix(prefix)
-    new Routes(errorHandler, HomeController_0, Assets_1, prefix)
+    new Routes(errorHandler, Assets_0, BackendAPI_Controller_1, prefix)
   }
 
   private[this] val defaultPrefix: String = {
@@ -39,8 +39,8 @@ class Routes(
   }
 
   def documentation = List(
-    ("""GET""", this.prefix, """controllers.HomeController.index()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/authenticate/""", """@io.backend.api.controllers.BackendAPI_Controller@.authenticate(request:Request)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -48,30 +48,12 @@ class Routes(
   }}
 
 
-  // @LINE:6
-  private[this] lazy val controllers_HomeController_index0_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix)))
-  )
-  private[this] lazy val controllers_HomeController_index0_invoker = createInvoker(
-    HomeController_0.index(),
-    play.api.routing.HandlerDef(this.getClass.getClassLoader,
-      "router",
-      "controllers.HomeController",
-      "index",
-      Nil,
-      "GET",
-      this.prefix + """""",
-      """ An example controller showing a sample home page""",
-      Seq()
-    )
-  )
-
-  // @LINE:9
-  private[this] lazy val controllers_Assets_versioned1_route = Route("GET",
+  // @LINE:8
+  private[this] lazy val controllers_Assets_versioned0_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_versioned1_invoker = createInvoker(
-    Assets_1.versioned(fakeValue[String], fakeValue[Asset]),
+  private[this] lazy val controllers_Assets_versioned0_invoker = createInvoker(
+    Assets_0.versioned(fakeValue[String], fakeValue[Asset]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.Assets",
@@ -84,19 +66,40 @@ class Routes(
     )
   )
 
+  // @LINE:11
+  private[this] lazy val io_backend_api_controllers_BackendAPI_Controller_authenticate1_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("api/authenticate/")))
+  )
+  private[this] lazy val io_backend_api_controllers_BackendAPI_Controller_authenticate1_invoker = createInvoker(
+    
+    (req:play.mvc.Http.Request) =>
+      BackendAPI_Controller_1.get.authenticate(fakeValue[play.mvc.Http.Request]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "io.backend.api.controllers.BackendAPI_Controller",
+      "authenticate",
+      Seq(classOf[play.mvc.Http.Request]),
+      "POST",
+      this.prefix + """api/authenticate/""",
+      """""",
+      Seq()
+    )
+  )
+
 
   def routes: PartialFunction[RequestHeader, Handler] = {
   
-    // @LINE:6
-    case controllers_HomeController_index0_route(params@_) =>
-      call { 
-        controllers_HomeController_index0_invoker.call(HomeController_0.index())
+    // @LINE:8
+    case controllers_Assets_versioned0_route(params@_) =>
+      call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
+        controllers_Assets_versioned0_invoker.call(Assets_0.versioned(path, file))
       }
   
-    // @LINE:9
-    case controllers_Assets_versioned1_route(params@_) =>
-      call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
-        controllers_Assets_versioned1_invoker.call(Assets_1.versioned(path, file))
+    // @LINE:11
+    case io_backend_api_controllers_BackendAPI_Controller_authenticate1_route(params@_) =>
+      call { 
+        io_backend_api_controllers_BackendAPI_Controller_authenticate1_invoker.call(
+          req => BackendAPI_Controller_1.get.authenticate(req))
       }
   }
 }
