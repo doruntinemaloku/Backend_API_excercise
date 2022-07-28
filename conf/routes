@@ -5,9 +5,13 @@
 
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+GET           /assets/*file             controllers.Assets.versioned(path="/public", file: Asset)
 
 
-POST    /api/authenticate/          @io.backend.api.controllers.BackendAPI_Controller.authenticate(request: Request)
+POST          /api/authenticate/        @io.backend.api.controllers.BackendAPI_Controller.authenticate(request: Request)
+POST          /api/verify/        @io.backend.api.controllers.BackendAPI_Controller.verify(request: Request)
 
-#POST    /api/dashboard/             controllers.BackendAPI_Controller.create(request: Request)
+POST          /api/dashboard/           @io.backend.api.controllers.Dashboard_Contoller.create(request: Request)
+GET           /api/dashboard/           @io.backend.api.controllers.Dashboard_Contoller.read(request: Request)
+PUT           /api/dashboard/           @io.backend.api.controllers.Dashboard_Contoller.update(request: Request, id: String)
+DELETE        /api/dashboard/           @io.backend.api.controllers.Dashboard_Contoller.delete(request: Request, id:String)

@@ -1,16 +1,21 @@
 package io.backend.api.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
-import java.security.Timestamp;
+import java.sql.Timestamp;
 
 @Data
-public class Dashboard {
-    String id;
+@EqualsAndHashCode(callSuper = true)
+@AllArgsConstructor
+@NoArgsConstructor
+public class Dashboard extends BaseModel{
     String name;
     String description;
     String   parentId;
-    Timestamp createdAt;
+    Long createdAt;
     String[] readACL;
     String[] writeACL;
 }
