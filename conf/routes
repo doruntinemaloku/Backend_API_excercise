@@ -13,5 +13,5 @@ POST          /api/verify/        @io.backend.api.controllers.BackendAPI_Control
 
 POST          /api/dashboard/           @io.backend.api.controllers.Dashboard_Contoller.create(request: Request)
 GET           /api/dashboard/           @io.backend.api.controllers.Dashboard_Contoller.read(request: Request)
-PUT           /api/dashboard/           @io.backend.api.controllers.Dashboard_Contoller.update(request: Request, id: String)
-DELETE        /api/dashboard/           @io.backend.api.controllers.Dashboard_Contoller.delete(request: Request, id:String)
+PUT           /api/dashboard/:id           @io.backend.api.controllers.Dashboard_Contoller.update(request: Request, id: String)
+DELETE        /api/dashboard/:id           @io.backend.api.controllers.Dashboard_Contoller.delete(request: Request, id:String)

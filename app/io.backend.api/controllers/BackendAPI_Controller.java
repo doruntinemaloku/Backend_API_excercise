@@ -63,29 +63,31 @@ public class BackendAPI_Controller extends Controller {
     }
     public Result verify(Http.Request request) {
         try {
+            String token = request.header("token").get();
+
             Algorithm algorithm = Algorithm.HMAC256(ConfigFactory.load().getString("play.http.secret.key"));
             JWTVerifier verifier = JWT.require(algorithm)
-                    .build(); //Reusable verifier instance
-            String token= request.header("token").get();
-            DecodedJWT jwt = verifier.verify( token );
+                                      .build();
+            DecodedJWT jwt = verifier.verify(token);
 
             String[] parts = token.split("\\.");
-            String payload= String.valueOf(Base64.getUrlDecoder().decode(parts[1]));
-            System.out.println(payload);
-            MongoCollection<User> collection = mongoDB.getMongoDatabase().getCollection("user", User.class);
-            User user= collection.find(Filters.eq("_id", new ObjectId(payload.substring(7,payload.length()-2)))).first();
-//            User user = mongoDB
-//                    .getMongoDatabase()
-//                    .getCollection("user", User.class)
-//                    .find(
-//                            eq("_id", new ObjectId(payload.substring(7,payload.length()-2).toString()))
-//                    )
-//                    .first();
-            return ok(Json.toJson(user));
-        } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
-        } catch (JWTVerificationException exception) {
-            return badRequest("token not verified");
+
+            String payload = new String(Base64.getUrlDecoder().decode(parts[1]));
+//            System.out.println(payload);
+            JsonNode tree = Json.mapper().readTree(payload);
+
+            User user1 = mongoDB
+                    .getMongoDatabase()
+                    .getCollection("user", User.class)
+                    .find(
+                            eq("_id", new ObjectId(tree.get("id").asText()))
+                    )
+                    .first();
+            return ok(Json.toJson(user1));
+        } catch (JWTVerificationException e) {
+            return forbidden("TOKEN NOT VERIFIED");
+        } catch (Exception e) {
+            return internalServerError();
         }
     }
 }
