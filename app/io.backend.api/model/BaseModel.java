@@ -15,6 +15,7 @@ import org.bson.codecs.pojo.annotations.BsonIgnore;
 import org.bson.types.ObjectId;
 
 import java.io.Serializable;
+import java.util.List;
 
 @EqualsAndHashCode(of={"id"})
 @JsonInclude(Include.NON_NULL)
@@ -26,7 +27,7 @@ public @Data class BaseModel implements Cloneable, Serializable {
 
 	@Setter(AccessLevel.NONE)
 	@BsonIgnore
-	protected Long createdAt;
+	public Long createdAt;
 
 	protected Long updatedAt;
 

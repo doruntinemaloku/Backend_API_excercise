@@ -5,7 +5,8 @@ import org.bson.codecs.pojo.annotations.BsonDiscriminator;
 
 @BsonDiscriminator(key = "type", value = "TEXT")
 @Data
-public class ImageDashboard extends Dashboard{
+public class ImageDashboard extends Content{
+    String url;
     @Override
     public Usage getType() { return Usage.IMAGE; }
 }

@@ -129,6 +129,7 @@
     <orderEntry type="library" name="sbt: org.hibernate.validator:hibernate-validator:6.1.7.Final:jar" level="project" />
     <orderEntry type="library" name="sbt: org.jboss.logging:jboss-logging:3.3.2.Final:jar" level="project" />
     <orderEntry type="library" name="sbt: org.lz4:lz4-java:1.8.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.mindrot:jbcrypt:0.3m:jar" level="project" />
     <orderEntry type="library" name="sbt: org.mongodb:bson:4.3.0:jar" level="project" />
     <orderEntry type="library" name="sbt: org.mongodb:mongodb-driver-core:4.3.0:jar" level="project" />
     <orderEntry type="library" name="sbt: org.mongodb:mongodb-driver-sync:4.3.0:jar" level="project" />

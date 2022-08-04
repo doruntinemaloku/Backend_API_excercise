@@ -1,6 +1,4 @@
-[debug] downloaded https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.pom
-[debug] downloaded https://repo1.maven.org/maven2/org/apache/commons/commons-parent/22/commons-parent-22.pom
-[debug] downloaded https://repo1.maven.org/maven2/org/apache/apache/9/apache-9.pom
-[debug] downloaded https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar
-[debug] downloaded https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1-sources.jar
-[debug] downloaded https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1-javadoc.jar
+[debug] downloaded https://repo1.maven.org/maven2/org/mindrot/jbcrypt/0.3m/jbcrypt-0.3m.pom
+[debug] downloaded https://repo1.maven.org/maven2/org/mindrot/jbcrypt/0.3m/jbcrypt-0.3m.jar
+[debug] downloaded https://repo1.maven.org/maven2/org/mindrot/jbcrypt/0.3m/jbcrypt-0.3m-javadoc.jar
+[debug] downloaded https://repo1.maven.org/maven2/org/mindrot/jbcrypt/0.3m/jbcrypt-0.3m-sources.jar

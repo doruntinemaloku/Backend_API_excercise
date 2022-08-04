@@ -53,13 +53,46 @@ package io.backend.api.controllers {
     // @LINE:16
     def update(id:String): Call = {
       
-      Call("PUT", _prefix + { _defaultPrefix } + "api/dashboard/" + play.core.routing.queryString(List(Some(implicitly[play.api.mvc.QueryStringBindable[String]].unbind("id", id)))))
+      Call("PUT", _prefix + { _defaultPrefix } + "api/dashboard/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[String]].unbind("id", id)))
     }
   
     // @LINE:17
     def delete(id:String): Call = {
       
-      Call("DELETE", _prefix + { _defaultPrefix } + "api/dashboard/" + play.core.routing.queryString(List(Some(implicitly[play.api.mvc.QueryStringBindable[String]].unbind("id", id)))))
+      Call("DELETE", _prefix + { _defaultPrefix } + "api/dashboard/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[String]].unbind("id", id)))
+    }
+  
+  }
+
+  // @LINE:20
+  class ReverseContent_Controller(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:20
+    def create(id:String): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "api/dashboard/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[String]].unbind("id", id)) + "/content/")
+    }
+  
+    // @LINE:21
+    def read(id:String): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "api/dashboard/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[String]].unbind("id", id)) + "/content/")
+    }
+  
+    // @LINE:22
+    def update(id:String, contentId:String): Call = {
+      
+      Call("PUT", _prefix + { _defaultPrefix } + "api/dashboard/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[String]].unbind("id", id)) + "/content/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[String]].unbind("contentId", contentId)))
+    }
+  
+    // @LINE:23
+    def delete(id:String, contentId:String): Call = {
+      
+      Call("DELETE", _prefix + { _defaultPrefix } + "api/dashboard/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[String]].unbind("id", id)) + "/content/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[String]].unbind("contentId", contentId)))
     }
   
   }

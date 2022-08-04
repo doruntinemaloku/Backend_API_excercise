@@ -45,6 +45,8 @@ public class BackendAPI_Controller extends Controller {
             if (user == null) {
                 return badRequest();
             }
+
+
             Algorithm algorithm = Algorithm.HMAC256(ConfigFactory.load().getString("play.http.secret.key"));
             String token = JWT.create()
                     .withClaim("id", user.getId().toString())

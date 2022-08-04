@@ -19,6 +19,8 @@ class Routes(
   BackendAPI_Controller_1: javax.inject.Provider[io.backend.api.controllers.BackendAPI_Controller],
   // @LINE:14
   Dashboard_Contoller_2: javax.inject.Provider[io.backend.api.controllers.Dashboard_Contoller],
+  // @LINE:20
+  Content_Controller_3: javax.inject.Provider[io.backend.api.controllers.Content_Controller],
   val prefix: String
 ) extends GeneratedRouter {
 
@@ -29,13 +31,15 @@ class Routes(
     // @LINE:11
     BackendAPI_Controller_1: javax.inject.Provider[io.backend.api.controllers.BackendAPI_Controller],
     // @LINE:14
-    Dashboard_Contoller_2: javax.inject.Provider[io.backend.api.controllers.Dashboard_Contoller]
-  ) = this(errorHandler, Assets_0, BackendAPI_Controller_1, Dashboard_Contoller_2, "/")
+    Dashboard_Contoller_2: javax.inject.Provider[io.backend.api.controllers.Dashboard_Contoller],
+    // @LINE:20
+    Content_Controller_3: javax.inject.Provider[io.backend.api.controllers.Content_Controller]
+  ) = this(errorHandler, Assets_0, BackendAPI_Controller_1, Dashboard_Contoller_2, Content_Controller_3, "/")
 
   def withPrefix(addPrefix: String): Routes = {
     val prefix = play.api.routing.Router.concatPrefix(addPrefix, this.prefix)
     router.RoutesPrefix.setPrefix(prefix)
-    new Routes(errorHandler, Assets_0, BackendAPI_Controller_1, Dashboard_Contoller_2, prefix)
+    new Routes(errorHandler, Assets_0, BackendAPI_Controller_1, Dashboard_Contoller_2, Content_Controller_3, prefix)
   }
 
   private[this] val defaultPrefix: String = {
@@ -48,8 +52,12 @@ class Routes(
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/verify/""", """@io.backend.api.controllers.BackendAPI_Controller@.verify(request:Request)"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/dashboard/""", """@io.backend.api.controllers.Dashboard_Contoller@.create(request:Request)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/dashboard/""", """@io.backend.api.controllers.Dashboard_Contoller@.read(request:Request)"""),
-    ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/dashboard/""", """@io.backend.api.controllers.Dashboard_Contoller@.update(request:Request, id:String)"""),
-    ("""DELETE""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/dashboard/""", """@io.backend.api.controllers.Dashboard_Contoller@.delete(request:Request, id:String)"""),
+    ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/dashboard/""" + "$" + """id<[^/]+>""", """@io.backend.api.controllers.Dashboard_Contoller@.update(request:Request, id:String)"""),
+    ("""DELETE""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/dashboard/""" + "$" + """id<[^/]+>""", """@io.backend.api.controllers.Dashboard_Contoller@.delete(request:Request, id:String)"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/dashboard/""" + "$" + """id<[^/]+>/content/""", """@io.backend.api.controllers.Content_Controller@.create(request:Request, id:String)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/dashboard/""" + "$" + """id<[^/]+>/content/""", """@io.backend.api.controllers.Content_Controller@.read(request:Request, id:String)"""),
+    ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/dashboard/""" + "$" + """id<[^/]+>/content/""" + "$" + """contentId<[^/]+>""", """@io.backend.api.controllers.Content_Controller@.update(request:Request, id:String, contentId:String)"""),
+    ("""DELETE""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/dashboard/""" + "$" + """id<[^/]+>/content/""" + "$" + """contentId<[^/]+>""", """@io.backend.api.controllers.Content_Controller@.delete(request:Request, id:String, contentId:String)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -157,7 +165,7 @@ class Routes(
 
   // @LINE:16
   private[this] lazy val io_backend_api_controllers_Dashboard_Contoller_update5_route = Route("PUT",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("api/dashboard/")))
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("api/dashboard/"), DynamicPart("id", """[^/]+""",true)))
   )
   private[this] lazy val io_backend_api_controllers_Dashboard_Contoller_update5_invoker = createInvoker(
     
@@ -169,7 +177,7 @@ class Routes(
       "update",
       Seq(classOf[play.mvc.Http.Request], classOf[String]),
       "PUT",
-      this.prefix + """api/dashboard/""",
+      this.prefix + """api/dashboard/""" + "$" + """id<[^/]+>""",
       """""",
       Seq()
     )
@@ -177,7 +185,7 @@ class Routes(
 
   // @LINE:17
   private[this] lazy val io_backend_api_controllers_Dashboard_Contoller_delete6_route = Route("DELETE",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("api/dashboard/")))
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("api/dashboard/"), DynamicPart("id", """[^/]+""",true)))
   )
   private[this] lazy val io_backend_api_controllers_Dashboard_Contoller_delete6_invoker = createInvoker(
     
@@ -189,7 +197,87 @@ class Routes(
       "delete",
       Seq(classOf[play.mvc.Http.Request], classOf[String]),
       "DELETE",
-      this.prefix + """api/dashboard/""",
+      this.prefix + """api/dashboard/""" + "$" + """id<[^/]+>""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:20
+  private[this] lazy val io_backend_api_controllers_Content_Controller_create7_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("api/dashboard/"), DynamicPart("id", """[^/]+""",true), StaticPart("/content/")))
+  )
+  private[this] lazy val io_backend_api_controllers_Content_Controller_create7_invoker = createInvoker(
+    
+    (req:play.mvc.Http.Request) =>
+      Content_Controller_3.get.create(fakeValue[play.mvc.Http.Request], fakeValue[String]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "io.backend.api.controllers.Content_Controller",
+      "create",
+      Seq(classOf[play.mvc.Http.Request], classOf[String]),
+      "POST",
+      this.prefix + """api/dashboard/""" + "$" + """id<[^/]+>/content/""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:21
+  private[this] lazy val io_backend_api_controllers_Content_Controller_read8_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("api/dashboard/"), DynamicPart("id", """[^/]+""",true), StaticPart("/content/")))
+  )
+  private[this] lazy val io_backend_api_controllers_Content_Controller_read8_invoker = createInvoker(
+    
+    (req:play.mvc.Http.Request) =>
+      Content_Controller_3.get.read(fakeValue[play.mvc.Http.Request], fakeValue[String]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "io.backend.api.controllers.Content_Controller",
+      "read",
+      Seq(classOf[play.mvc.Http.Request], classOf[String]),
+      "GET",
+      this.prefix + """api/dashboard/""" + "$" + """id<[^/]+>/content/""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:22
+  private[this] lazy val io_backend_api_controllers_Content_Controller_update9_route = Route("PUT",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("api/dashboard/"), DynamicPart("id", """[^/]+""",true), StaticPart("/content/"), DynamicPart("contentId", """[^/]+""",true)))
+  )
+  private[this] lazy val io_backend_api_controllers_Content_Controller_update9_invoker = createInvoker(
+    
+    (req:play.mvc.Http.Request) =>
+      Content_Controller_3.get.update(fakeValue[play.mvc.Http.Request], fakeValue[String], fakeValue[String]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "io.backend.api.controllers.Content_Controller",
+      "update",
+      Seq(classOf[play.mvc.Http.Request], classOf[String], classOf[String]),
+      "PUT",
+      this.prefix + """api/dashboard/""" + "$" + """id<[^/]+>/content/""" + "$" + """contentId<[^/]+>""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:23
+  private[this] lazy val io_backend_api_controllers_Content_Controller_delete10_route = Route("DELETE",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("api/dashboard/"), DynamicPart("id", """[^/]+""",true), StaticPart("/content/"), DynamicPart("contentId", """[^/]+""",true)))
+  )
+  private[this] lazy val io_backend_api_controllers_Content_Controller_delete10_invoker = createInvoker(
+    
+    (req:play.mvc.Http.Request) =>
+      Content_Controller_3.get.delete(fakeValue[play.mvc.Http.Request], fakeValue[String], fakeValue[String]),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "io.backend.api.controllers.Content_Controller",
+      "delete",
+      Seq(classOf[play.mvc.Http.Request], classOf[String], classOf[String]),
+      "DELETE",
+      this.prefix + """api/dashboard/""" + "$" + """id<[^/]+>/content/""" + "$" + """contentId<[^/]+>""",
       """""",
       Seq()
     )
@@ -234,16 +322,44 @@ class Routes(
   
     // @LINE:16
     case io_backend_api_controllers_Dashboard_Contoller_update5_route(params@_) =>
-      call(params.fromQuery[String]("id", None)) { (id) =>
+      call(params.fromPath[String]("id", None)) { (id) =>
         io_backend_api_controllers_Dashboard_Contoller_update5_invoker.call(
           req => Dashboard_Contoller_2.get.update(req, id))
       }
   
     // @LINE:17
     case io_backend_api_controllers_Dashboard_Contoller_delete6_route(params@_) =>
-      call(params.fromQuery[String]("id", None)) { (id) =>
+      call(params.fromPath[String]("id", None)) { (id) =>
         io_backend_api_controllers_Dashboard_Contoller_delete6_invoker.call(
           req => Dashboard_Contoller_2.get.delete(req, id))
+      }
+  
+    // @LINE:20
+    case io_backend_api_controllers_Content_Controller_create7_route(params@_) =>
+      call(params.fromPath[String]("id", None)) { (id) =>
+        io_backend_api_controllers_Content_Controller_create7_invoker.call(
+          req => Content_Controller_3.get.create(req, id))
+      }
+  
+    // @LINE:21
+    case io_backend_api_controllers_Content_Controller_read8_route(params@_) =>
+      call(params.fromPath[String]("id", None)) { (id) =>
+        io_backend_api_controllers_Content_Controller_read8_invoker.call(
+          req => Content_Controller_3.get.read(req, id))
+      }
+  
+    // @LINE:22
+    case io_backend_api_controllers_Content_Controller_update9_route(params@_) =>
+      call(params.fromPath[String]("id", None), params.fromPath[String]("contentId", None)) { (id, contentId) =>
+        io_backend_api_controllers_Content_Controller_update9_invoker.call(
+          req => Content_Controller_3.get.update(req, id, contentId))
+      }
+  
+    // @LINE:23
+    case io_backend_api_controllers_Content_Controller_delete10_route(params@_) =>
+      call(params.fromPath[String]("id", None), params.fromPath[String]("contentId", None)) { (id, contentId) =>
+        io_backend_api_controllers_Content_Controller_delete10_invoker.call(
+          req => Content_Controller_3.get.delete(req, id, contentId))
       }
   }
 }
