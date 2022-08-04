@@ -254,3 +254,149 @@
 [0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
 [0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Scala sources and 7 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/controllers/User_Controller.java:18:1: class User_Contoller is public, should be declared in a file named User_Contoller.java[0m
+[0m[[0m[31merror[0m] [0m[0m@Authenticated[0m
+[0m[[0m[31merror[0m] [0m[0mpublic class User_Contoller extends Controller {[0m
+[0m[[0m[31merror[0m] [0m[0m    @Inject[0m
+[0m[[0m[31merror[0m] [0m[0m    SerializationService serializationService;[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m    @Inject[0m
+[0m[[0m[31merror[0m] [0m[0m    UserService service;[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m    /**[0m
+[0m[[0m[31merror[0m] [0m[0m     * Fetch all users[0m
+[0m[[0m[31merror[0m] [0m[0m     *[0m
+[0m[[0m[31merror[0m] [0m[0m     * @param request HTTP request[0m
+[0m[[0m[31merror[0m] [0m[0m     * @return[0m
+[0m[[0m[31merror[0m] [0m[0m     */[0m
+[0m[[0m[31merror[0m] [0m[0m    @BodyParser.Of(BodyParser.Json.class)[0m
+[0m[[0m[31merror[0m] [0m[0m    public CompletableFuture<Result> read(Http.Request request) {[0m
+[0m[[0m[31merror[0m] [0m[0m        return service.read()[0m
+[0m[[0m[31merror[0m] [0m[0m                .thenCompose((data) -> serializationService.toJsonNode(data))[0m
+[0m[[0m[31merror[0m] [0m[0m                .thenApply(Results::ok)[0m
+[0m[[0m[31merror[0m] [0m[0m                .exceptionally(DatabaseUtils::throwableToResult);[0m
+[0m[[0m[31merror[0m] [0m[0m    }[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m    /**[0m
+[0m[[0m[31merror[0m] [0m[0m     * Create User[0m
+[0m[[0m[31merror[0m] [0m[0m     *[0m
+[0m[[0m[31merror[0m] [0m[0m     * @param request HTTP request[0m
+[0m[[0m[31merror[0m] [0m[0m     * @return[0m
+[0m[[0m[31merror[0m] [0m[0m     */[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m    @BodyParser.Of(BodyParser.Json.class)[0m
+[0m[[0m[31merror[0m] [0m[0m    public CompletableFuture<Result> create(Http.Request request) {[0m
+[0m[[0m[31merror[0m] [0m[0m        return serializationService.parseBodyOfType(request, User.class)[0m
+[0m[[0m[31merror[0m] [0m[0m                .thenCompose((data) -> service.create(data))[0m
+[0m[[0m[31merror[0m] [0m[0m                .thenCompose((data) -> serializationService.toJsonNode(data))[0m
+[0m[[0m[31merror[0m] [0m[0m                .thenApply(Results::ok)[0m
+[0m[[0m[31merror[0m] [0m[0m                .exceptionally(DatabaseUtils::throwableToResult);[0m
+[0m[[0m[31merror[0m] [0m[0m    }[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m    /**[0m
+[0m[[0m[31merror[0m] [0m[0m     * Update User[0m
+[0m[[0m[31merror[0m] [0m[0m     *[0m
+[0m[[0m[31merror[0m] [0m[0m     * @param request HTTP request[0m
+[0m[[0m[31merror[0m] [0m[0m     * @param id      User Id[0m
+[0m[[0m[31merror[0m] [0m[0m     * @return[0m
+[0m[[0m[31merror[0m] [0m[0m     */[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m    @BodyParser.Of(BodyParser.Json.class)[0m
+[0m[[0m[31merror[0m] [0m[0m    public CompletableFuture<Result> update(Http.Request request, String id) {[0m
+[0m[[0m[31merror[0m] [0m[0m        return serializationService.parseBodyOfType(request, User.class)[0m
+[0m[[0m[31merror[0m] [0m[0m                .thenCompose((data) -> service.update(data, id))[0m
+[0m[[0m[31merror[0m] [0m[0m                .thenCompose((data) -> serializationService.toJsonNode(data))[0m
+[0m[[0m[31merror[0m] [0m[0m                .thenApply(Results::ok)[0m
+[0m[[0m[31merror[0m] [0m[0m                .exceptionally(DatabaseUtils::throwableToResult);[0m
+[0m[[0m[31merror[0m] [0m[0m    }[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m    /**[0m
+[0m[[0m[31merror[0m] [0m[0m     * Delete User[0m
+[0m[[0m[31merror[0m] [0m[0m     *[0m
+[0m[[0m[31merror[0m] [0m[0m     * @param request HTTP request[0m
+[0m[[0m[31merror[0m] [0m[0m     * @param id      User Id[0m
+[0m[[0m[31merror[0m] [0m[0m     * @return[0m
+[0m[[0m[31merror[0m] [0m[0m     */[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m    @BodyParser.Of(BodyParser.Json.class)[0m
+[0m[[0m[31merror[0m] [0m[0m    public CompletableFuture<Result> delete(Http.Request request, String id) {[0m
+[0m[[0m[31merror[0m] [0m[0m        return serializationService.parseBodyOfType(request, User.class)[0m
+[0m[[0m[31merror[0m] [0m[0m                .thenCompose((data) -> service.delete(data, id))[0m
+[0m[[0m[31merror[0m] [0m[0m                .thenCompose((data) -> serializationService.toJsonNode(data))[0m
+[0m[[0m[31merror[0m] [0m[0m                .thenApply(Results::ok)[0m
+[0m[[0m[31merror[0m] [0m[0m                .exceptionally(DatabaseUtils::throwableToResult);[0m
+[0m[[0m[31merror[0m] [0m[0m    }[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m}[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/Hash.java:3:1: package org.mindrot.jbcrypt does not exist[0m
+[0m[[0m[31merror[0m] [0m[0morg.mindrot.jbcrypt.BCrypt[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/DashboardService.java:50:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   method setItems(java.util.List<io.backend.api.model.Content>)[0m
+[0m[[0m[31merror[0m] [0m[0m  location: variable x of type io.backend.api.model.Dashboard[0m
+[0m[[0m[31merror[0m] [0m[0mx.setItems[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/Hash.java:17:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   variable BCrypt[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class io.backend.api.sevices.Hash[0m
+[0m[[0m[31merror[0m] [0m[0mBCrypt[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/Hash.java:17:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   variable BCrypt[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class io.backend.api.sevices.Hash[0m
+[0m[[0m[31merror[0m] [0m[0mBCrypt[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/Hash.java:33:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   variable BCrypt[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class io.backend.api.sevices.Hash[0m
+[0m[[0m[31merror[0m] [0m[0mBCrypt[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) javac returned non-zero exit code[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Scala sources and 7 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/conf/routes:20:1: type User_Contoller is not a member of package io.backend.api.controllers[0m
+[0m[[0m[31merror[0m] [0m[0mdid you mean User_Controller?[0m
+[0m[[0m[31merror[0m] [0m[0mPOST          /api/user/                              @io.backend.api.controllers.User_Contoller.create(request: Request)[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/conf/routes:20:1: type User_Contoller is not a member of package io.backend.api.controllers[0m
+[0m[[0m[31merror[0m] [0m[0mdid you mean User_Controller?[0m
+[0m[[0m[31merror[0m] [0m[0mPOST          /api/user/                              @io.backend.api.controllers.User_Contoller.create(request: Request)[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Scala sources and 7 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/Hash.java:3:1: package org.mindrot.jbcrypt does not exist[0m
+[0m[[0m[31merror[0m] [0m[0morg.mindrot.jbcrypt.BCrypt[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) javac returned non-zero exit code[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Scala sources and 7 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/Hash.java:3:1: package org.mindrot.jbcrypt does not exist[0m
+[0m[[0m[31merror[0m] [0m[0morg.mindrot.jbcrypt.BCrypt[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) javac returned non-zero exit code[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Scala sources and 7 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/Hash.java:5:1: package org.mindrot.jbcrypt does not exist[0m
+[0m[[0m[31merror[0m] [0m[0morg.mindrot.jbcrypt.BCrypt[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) javac returned non-zero exit code[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Scala sources and 7 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/Hash.java:5:1: package org.mindrot.jbcrypt does not exist[0m
+[0m[[0m[31merror[0m] [0m[0morg.mindrot.jbcrypt.BCrypt[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) javac returned non-zero exit code[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Scala sources and 7 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/Hash.java:3:1: package org.mindrot.jbcrypt does not exist[0m
+[0m[[0m[31merror[0m] [0m[0morg.mindrot.jbcrypt.BCrypt[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) javac returned non-zero exit code[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m

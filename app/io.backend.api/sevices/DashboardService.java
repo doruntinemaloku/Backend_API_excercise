@@ -34,7 +34,7 @@ public class DashboardService {
             int skip=0, limit=100;
 
             List<Dashboard> dashboards = mongoDB.getMongoDatabase()
-                    .getCollection("dashboard", Dashboard.class)
+                    .getCollection("dashboards", Dashboard.class)
                     .find(AccessUtils.readAccess(user))
                     .skip(skip)
                     .limit(limit)
@@ -42,7 +42,7 @@ public class DashboardService {
 
             List<ObjectId> id = dashboards.stream().map(BaseModel::getId).collect(Collectors.toList());
 
-            List<Content> content = mongoDB.getMongoDatabase().getCollection("content", Content.class)
+            List<Content> content = mongoDB.getMongoDatabase().getCollection("contents", Content.class)
                     .find()
                     .filter(Filters.in("dashboardID", id))
                     .into(new ArrayList<>());
@@ -57,7 +57,7 @@ public class DashboardService {
     public CompletableFuture<Dashboard> create(Dashboard dashboard, User user) {
         return CompletableFuture.supplyAsync(() -> {
             try {
-                MongoCollection<Dashboard> collection = mongoDB.getMongoDatabase().getCollection("dashboard", Dashboard.class);
+                MongoCollection<Dashboard> collection = mongoDB.getMongoDatabase().getCollection("dashboards", Dashboard.class);
                 collection.find(AccessUtils.writeAccess(user));
 
                 collection.insertOne(dashboard);
@@ -73,7 +73,7 @@ public class DashboardService {
 
     public CompletableFuture<Dashboard> update(Dashboard dashboard, String id, User user) {
         return CompletableFuture.supplyAsync(() -> {
-            MongoCollection<Dashboard> collection = mongoDB.getMongoDatabase().getCollection("dashboard", Dashboard.class);
+            MongoCollection<Dashboard> collection = mongoDB.getMongoDatabase().getCollection("dashboards", Dashboard.class);
             collection.find(AccessUtils.writeAccess(user));
             //Update one user from database if it is already in it, if not return notFound
             if (ObjectId.isValid(id)) {
@@ -88,7 +88,7 @@ public class DashboardService {
 
     public CompletableFuture<Dashboard> delete(Dashboard dashboard, String id, User user) {
         return CompletableFuture.supplyAsync(() -> {
-            MongoCollection<Dashboard> collection = mongoDB.getMongoDatabase().getCollection("dashboard", Dashboard.class);
+            MongoCollection<Dashboard> collection = mongoDB.getMongoDatabase().getCollection("dashboards", Dashboard.class);
             collection.find(AccessUtils.writeAccess(user));
 
             //Delete one user from database if it is already in it, if not return notFound
@@ -101,22 +101,6 @@ public class DashboardService {
         }, ec.current());
     }
 
-//    public CompletableFuture<List<Dashboard>> hierarchy(List<Dashboard> dashboard) {
-//        return CompletableFuture.supplyAsync(() -> {
-//            List<Dashboard> prinderit = dashboard.stream()
-//                    .reduce(new ArrayList<>(), (lista, user) -> {
-//                        user.setChildren(dashboard.stream()
-//                                .filter(u -> user.getId().equals(u.getParentId()))
-//                                .collect(Collectors.toList()));
-//                        if (user.getParentId() == null) {
-//                            lista.add(user);
-//                        }
-//                        return lista;
-//                    }, (a, b) -> a);
-//
-//            return prinderit;
-//        }, ec.current());
-//    }
 }
 
 

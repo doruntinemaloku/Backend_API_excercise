@@ -30,7 +30,6 @@ public class Content_Controller {
      * @param request HTTP request
      * @return
      */
-    @BodyParser.Of(BodyParser.Json.class)
     public CompletableFuture<Result> read(Http.Request request, String id) {
         return service.read(id, ServiceUtils.getUserFrom(request))
                 .thenCompose((data) -> serializationService.toJsonNode(data))

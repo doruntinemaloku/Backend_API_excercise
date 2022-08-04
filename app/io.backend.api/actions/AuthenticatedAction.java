@@ -56,7 +56,7 @@ public class AuthenticatedAction extends Action<Authenticated> {
 
             User user = mongoDB
                     .getMongoDatabase()
-                    .getCollection("user", User.class)
+                    .getCollection("users", User.class)
                     .find(eq("_id", new ObjectId(id)))
                     .first();
 

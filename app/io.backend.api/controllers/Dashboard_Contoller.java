@@ -25,7 +25,6 @@ public class Dashboard_Contoller extends Controller {
      * @param request HTTP request
      * @return
      */
-    @BodyParser.Of(BodyParser.Json.class)
     public CompletableFuture<Result> read(Http.Request request) {
         return service.read(ServiceUtils.getUserFrom(request))
                 .thenCompose((data) -> serializationService.toJsonNode(data))

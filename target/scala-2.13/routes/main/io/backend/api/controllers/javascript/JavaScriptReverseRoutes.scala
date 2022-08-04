@@ -91,7 +91,7 @@ package io.backend.api.controllers.javascript {
   }
 
   // @LINE:20
-  class ReverseContent_Controller(_prefix: => String) {
+  class ReverseUser_Controller(_prefix: => String) {
 
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
@@ -99,6 +99,56 @@ package io.backend.api.controllers.javascript {
 
   
     // @LINE:20
+    def create: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "io.backend.api.controllers.User_Controller.create",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "api/user/"})
+        }
+      """
+    )
+  
+    // @LINE:21
+    def read: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "io.backend.api.controllers.User_Controller.read",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "api/user/"})
+        }
+      """
+    )
+  
+    // @LINE:22
+    def update: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "io.backend.api.controllers.User_Controller.update",
+      """
+        function(id0) {
+          return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "api/user/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
+    // @LINE:23
+    def delete: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "io.backend.api.controllers.User_Controller.delete",
+      """
+        function(id0) {
+          return _wA({method:"DELETE", url:"""" + _prefix + { _defaultPrefix } + """" + "api/user/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
+  }
+
+  // @LINE:25
+  class ReverseContent_Controller(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:25
     def create: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "io.backend.api.controllers.Content_Controller.create",
       """
@@ -108,7 +158,7 @@ package io.backend.api.controllers.javascript {
       """
     )
   
-    // @LINE:21
+    // @LINE:26
     def read: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "io.backend.api.controllers.Content_Controller.read",
       """
@@ -118,7 +168,7 @@ package io.backend.api.controllers.javascript {
       """
     )
   
-    // @LINE:22
+    // @LINE:27
     def update: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "io.backend.api.controllers.Content_Controller.update",
       """
@@ -128,7 +178,7 @@ package io.backend.api.controllers.javascript {
       """
     )
   
-    // @LINE:23
+    // @LINE:28
     def delete: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "io.backend.api.controllers.Content_Controller.delete",
       """

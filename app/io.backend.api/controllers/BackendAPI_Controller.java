@@ -12,9 +12,11 @@ import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
 import com.typesafe.config.ConfigFactory;
+import io.backend.api.exceptions.RequestException;
 import io.backend.api.model.Dashboard;
 import io.backend.api.model.User;
 import io.backend.api.mongo.IMongoDB;
+import io.backend.api.sevices.Hash;
 import io.jsonwebtoken.Jwt;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
@@ -29,6 +31,7 @@ import com.mongodb.client.MongoCollection;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Base64;
+import java.util.concurrent.CompletionException;
 
 import static com.mongodb.client.model.Filters.eq;
 
@@ -39,27 +42,32 @@ public class BackendAPI_Controller extends Controller {
     public Result authenticate(Http.Request request) {
         try {
             JsonNode jsonNode = request.body().asJson();
-            MongoCollection<User> collection = mongoDB.getMongoDatabase().getCollection("user", User.class);
+            User user1=Json.fromJson(jsonNode, User.class);
+            MongoCollection<User> collection = mongoDB.getMongoDatabase().getCollection("users", User.class);
 
-            User user = collection.find(Filters.and(Filters.eq("username", jsonNode.get("username").asText()), Filters.eq("password", jsonNode.get("password").asText()))).first();
+            User user = collection.find(
+                            Filters.eq("username", user1.getUsername())
+                          )
+                    .first();
             if (user == null) {
                 return badRequest();
             }
 
+            if (!Hash.checkPassword(user1.getPassword(), user.getPassword())) {
+                throw new CompletionException(new RequestException(Http.Status.UNAUTHORIZED, Json.toJson("You are not authorized! Password Related")));
+            }
 
             Algorithm algorithm = Algorithm.HMAC256(ConfigFactory.load().getString("play.http.secret.key"));
             String token = JWT.create()
                     .withClaim("id", user.getId().toString())
                     .sign(algorithm);
-  //          String encode = Jwts.builder()
-//                    .claim("id", user.getId())
-//                    .signWith(SignatureAlgorithm.HS256, "secret")
-//                    .compact();
 
             return ok(Json.toJson(token));
         } catch (RuntimeException e) {
             throw new RuntimeException(e);
         } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }

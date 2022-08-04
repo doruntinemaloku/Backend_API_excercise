@@ -15,7 +15,7 @@ lazy val root = (project in file("."))
       "org.mongodb" % "mongodb-driver-sync" % "4.3.0",
       "com.auth0" % "java-jwt" % "3.3.0",
       "de.flapdoodle.embed" % "de.flapdoodle.embed.mongo" % "2.2.0",
-      "org.mindrot" % "jbcrypt" % "0.3m",
+      "org.mindrot" % "jbcrypt" % "0.3m"
     )
   )
 

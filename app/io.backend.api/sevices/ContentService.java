@@ -27,7 +27,7 @@ public class ContentService {
 
     public CompletableFuture<List<Content>> read(String id, User user) {
         return CompletableFuture.supplyAsync(() -> {
-            MongoCollection<Content> collection = mongoDB.getMongoDatabase().getCollection("content", Content.class);
+            MongoCollection<Content> collection = mongoDB.getMongoDatabase().getCollection("contents", Content.class);
             collection.find(AccessUtils.readAccess(user));
 
             return collection.find().filter(Filters.eq("dashboardID", new ObjectId(id))).into(new ArrayList<>());
@@ -37,7 +37,7 @@ public class ContentService {
     public CompletableFuture<Content> create(Content content, String id, User user) {
         return CompletableFuture.supplyAsync(() -> {
             try {
-                MongoCollection<Content> collection = mongoDB.getMongoDatabase().getCollection("content", Content.class);
+                MongoCollection<Content> collection = mongoDB.getMongoDatabase().getCollection("contents", Content.class);
                 collection.find(AccessUtils.writeAccess(user));
 
                 content.setDashboardID(new ObjectId(id));
@@ -55,7 +55,7 @@ public class ContentService {
 
     public CompletableFuture<Content> update(Content content, String id, String contentId, User user) {
         return CompletableFuture.supplyAsync(() -> {
-            MongoCollection<Content> collection = mongoDB.getMongoDatabase().getCollection("content", Content.class);
+            MongoCollection<Content> collection = mongoDB.getMongoDatabase().getCollection("contents", Content.class);
             collection.find(AccessUtils.writeAccess(user));
             //Update one content from database if it is already in it, if not return notFound
             if (ObjectId.isValid(id)) {
@@ -71,7 +71,7 @@ public class ContentService {
 
     public CompletableFuture<Content> delete(Content content, String id, User user) {
         return CompletableFuture.supplyAsync(() -> {
-            MongoCollection<Content> collection = mongoDB.getMongoDatabase().getCollection("content", Content.class);
+            MongoCollection<Content> collection = mongoDB.getMongoDatabase().getCollection("contents", Content.class);
             collection.find(AccessUtils.writeAccess(user));
 
             //Delete one content from database if it is already in it, if not return notFound

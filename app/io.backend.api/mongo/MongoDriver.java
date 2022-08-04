@@ -52,7 +52,7 @@ public abstract class MongoDriver implements IMongoDB {
 //		ClassModel<FreeUser> freeUserModel = ClassModel.builder(FreeUser.class).enableDiscriminator(true).build();
 //		ClassModel<SubscriberUser> subscriberUserModel = ClassModel.builder(SubscriberUser.class).enableDiscriminator(true).build();
 //		ClassModel<PremiumUser> premiumUserModel = ClassModel.builder(PremiumUser.class).enableDiscriminator(true).build();
-		ClassModel<User> user = ClassModel.builder(User.class).enableDiscriminator(true).build();
+		ClassModel<User> user = ClassModel.builder(User.class).enableDiscriminator(false).build();
 		ClassModel<Dashboard>  dashboard = ClassModel.builder(Dashboard.class).enableDiscriminator(true).build();
 		ClassModel<EmailDashboard>  emailDashboard = ClassModel.builder(EmailDashboard.class).enableDiscriminator(true).build();
 		ClassModel<TextDashboard>  textDashboard = ClassModel.builder(TextDashboard.class).enableDiscriminator(true).build();
