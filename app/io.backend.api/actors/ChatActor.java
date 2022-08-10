@@ -46,7 +46,7 @@ public class ChatActor extends AbstractActor {
     private ChatActor(ActorRef out, String roomId, boolean write) {
         this.roomId = roomId;
         this.out = out;
-        this.write=write;
+        this.write = write;
         mediator.tell(new DistributedPubSubMediator.Subscribe(roomId, getSelf()), getSelf());
     }
 
@@ -62,9 +62,10 @@ public class ChatActor extends AbstractActor {
 
     /**
      * Receiver of socket messages comming from the front end
+     *
      * @param message
      */
-    public void onMessageReceived (String message) {
+    public void onMessageReceived(String message) {
         if (message.equals(PING)) {
             out.tell(PONG, getSelf());
             return;
@@ -74,9 +75,10 @@ public class ChatActor extends AbstractActor {
 
     /**
      * Chat Message Protocol message receiver
+     *
      * @param what
      */
-    public void onChatMessageReceived (ChatActorProtocol.ChatMessage what) {
+    public void onChatMessageReceived(ChatActorProtocol.ChatMessage what) {
         // Don't send messages back that came from this socket
         if (getSender().equals(getSelf())) {
             return;
@@ -87,17 +89,19 @@ public class ChatActor extends AbstractActor {
 
     /**
      * When a subscribe message is received, this method gets called
+     *
      * @param message
      */
-    public void onSubscribe (DistributedPubSubMediator.SubscribeAck message) {
+    public void onSubscribe(DistributedPubSubMediator.SubscribeAck message) {
         this.joinTheRoom();
     }
 
     /**
      * When an unsubscribe message is received, this method gets called
+     *
      * @param message
      */
-    public void onUnsubscribe (DistributedPubSubMediator.UnsubscribeAck message) {
+    public void onUnsubscribe(DistributedPubSubMediator.UnsubscribeAck message) {
         this.leaveTheRoom();
     }
 
@@ -112,28 +116,29 @@ public class ChatActor extends AbstractActor {
     /**
      * Sends a simple JOINED_ROOM message
      */
-    private void joinTheRoom () {
+    private void joinTheRoom() {
         this.broadcast(JOINED_ROOM);
     }
 
     /**
      * Sends a simple LEFT_ROOM message
      */
-    private void leaveTheRoom () {
+    private void leaveTheRoom() {
         this.broadcast(LEFT_ROOM);
     }
 
     /**
      * Publish message to the current room
+     *
      * @param message
      */
 
-    private void broadcast(String message){
+    private void broadcast(String message) {
         if (!write) {
-            out.tell("You have no access to message here!",getSelf());
+            out.tell("You have no access to message here!", getSelf());
             return;
         }
         mediator.tell(new DistributedPubSubMediator
-                .Publish(roomId, new ChatActorProtocol.ChatMessage(message)),getSelf());
+                .Publish(roomId, new ChatActorProtocol.ChatMessage(message)), getSelf());
     }
 }

@@ -40,18 +40,7 @@ public class ChatRoomController {
     @Inject
     private Materializer materializer;
 
-    public WebSocket chat(String roomId, String token) throws UnsupportedEncodingException {
-
-
-//        Chat chat = mongoDB.getMongoDatabase().getCollection("chat", Chat.class)
-//                .find(Filters.eq("_id", new ObjectId(roomId)))
-//                .first();
-//
-//        if(chat  == null){
-//            throw new CompletionException(new RequestException(Http.Status.FORBIDDEN, Json.toJson("Chat is empty")));
-//        }
-//        return WebSocket.Text.accept(request -> ActorFlow.actorRef((out) -> ChatActor.props(out, roomId), actorSystem, materializer));
-//    }
+    public WebSocket chat(String roomId, String token) {
 
         return WebSocket.Text.acceptOrResult(request ->
                 {
@@ -74,12 +63,10 @@ public class ChatRoomController {
                         }
                         String userId = user.getId().toString();
                         List<String> roles = user.getRoles();
-                        System.out.println("chat "+ chat);
                         boolean read = false;
                         boolean write = false;
                         for (String id : roles) {
                             if (chat.getReadACL().contains(id) || chat.getReadACL().contains(userId)) {
-                                System.out.println("true");
                                 read = true;
                             }
                             if (chat.getWriteACL().contains(id) || chat.getWriteACL().contains(userId)) {
