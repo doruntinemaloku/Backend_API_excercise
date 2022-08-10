@@ -8,10 +8,10 @@
         <option value="play.data._" />
         <option value="java.util._" />
         <option value="play.core.j.PlayMagicForJava._" />
-        <option value="scala.jdk.CollectionConverters._" />
         <option value="_root_.play.twirl.api.Html" />
         <option value="play.mvc._" />
         <option value="_root_.play.twirl.api.TwirlFeatureImports._" />
+        <option value="scala.collection.JavaConverters._" />
         <option value="play.api.templates.PlayMagic._" />
         <option value="_root_.play.twirl.api.Txt" />
         <option value="play.api.data.Field" />

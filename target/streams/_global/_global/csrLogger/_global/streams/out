@@ -1,4 +1,8 @@
-[debug] downloaded https://repo1.maven.org/maven2/org/mindrot/jbcrypt/0.3m/jbcrypt-0.3m.pom
-[debug] downloaded https://repo1.maven.org/maven2/org/mindrot/jbcrypt/0.3m/jbcrypt-0.3m.jar
-[debug] downloaded https://repo1.maven.org/maven2/org/mindrot/jbcrypt/0.3m/jbcrypt-0.3m-javadoc.jar
-[debug] downloaded https://repo1.maven.org/maven2/org/mindrot/jbcrypt/0.3m/jbcrypt-0.3m-sources.jar
+[debug] downloaded https://repo1.maven.org/maven2/com/lightbend/akka/management/akka-management-cluster-http_2.13/1.0.0/akka-management-cluster-http_2.13-1.0.0.pom
+[debug] downloaded https://repo1.maven.org/maven2/com/lightbend/akka/management/akka-management-cluster-bootstrap_2.13/1.0.0/akka-management-cluster-bootstrap_2.13-1.0.0.pom
+[debug] downloaded https://repo1.maven.org/maven2/com/lightbend/akka/management/akka-management_2.13/1.0.0/akka-management_2.13-1.0.0.pom
+[debug] downloaded https://repo1.maven.org/maven2/com/lightbend/akka/discovery/akka-discovery-kubernetes-api_2.13/1.0.0/akka-discovery-kubernetes-api_2.13-1.0.0.pom
+[debug] downloaded https://repo1.maven.org/maven2/com/lightbend/akka/discovery/akka-discovery-kubernetes-api_2.13/1.0.0/akka-discovery-kubernetes-api_2.13-1.0.0.pom.sha1
+[debug] downloaded https://repo1.maven.org/maven2/com/lightbend/akka/management/akka-management-cluster-http_2.13/1.0.0/akka-management-cluster-http_2.13-1.0.0.pom.sha1
+[debug] downloaded https://repo1.maven.org/maven2/com/lightbend/akka/management/akka-management_2.13/1.0.0/akka-management_2.13-1.0.0.pom.sha1
+[debug] downloaded https://repo1.maven.org/maven2/com/lightbend/akka/management/akka-management-cluster-bootstrap_2.13/1.0.0/akka-management-cluster-bootstrap_2.13-1.0.0.pom.sha1

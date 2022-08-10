@@ -6,7 +6,7 @@
         <entry key="Backend_API_Excersise">
           <value>
             <ProjectSettingsEntry>
-              <option name="playDistrPath" value="$USER_HOME$/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/typesafe/play/play_2.13/2.8.16/play_2.13-2.8.16.jar" />
+              <option name="playDistrPath" value="$USER_HOME$/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/typesafe/play/play_2.12/2.8.16/play_2.12-2.8.16.jar" />
             </ProjectSettingsEntry>
           </value>
         </entry>
@@ -35,7 +35,7 @@
                   <option value="play.api.data.Field" />
                   <option value="play.data._" />
                   <option value="play.core.j.PlayFormsMagicForJava._" />
-                  <option value="scala.jdk.CollectionConverters._" />
+                  <option value="scala.collection.JavaConverters._" />
                 </list>
               </option>
               <option name="routesImports">

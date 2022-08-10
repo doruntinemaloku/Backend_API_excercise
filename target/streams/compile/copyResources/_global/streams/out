@@ -1,5 +1,6 @@
 [0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/Users/doruntinemaloku/Documents/Backend_API_Excersise/conf/logback.xml,/Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.13/classes/logback.xml)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/Users/doruntinemaloku/Documents/Backend_API_Excersise/conf/application.conf,/Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.13/classes/application.conf)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/Users/doruntinemaloku/Documents/Backend_API_Excersise/conf/routes,/Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.13/classes/routes)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/Users/doruntinemaloku/Documents/Backend_API_Excersise/conf/reference.conf,/Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.13/classes/reference.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/doruntinemaloku/Documents/Backend_API_Excersise/conf/logback.xml,/Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes/logback.xml)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/doruntinemaloku/Documents/Backend_API_Excersise/conf/development.conf,/Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes/development.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/doruntinemaloku/Documents/Backend_API_Excersise/conf/application.conf,/Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes/application.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/doruntinemaloku/Documents/Backend_API_Excersise/conf/routes,/Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes/routes)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/doruntinemaloku/Documents/Backend_API_Excersise/conf/reference.conf,/Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes/reference.conf)[0m

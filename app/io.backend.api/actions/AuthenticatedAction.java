@@ -13,6 +13,7 @@ import com.typesafe.config.ConfigFactory;
 import io.backend.api.model.User;
 import io.backend.api.model.validator.HibernateValidator;
 import io.backend.api.mongo.IMongoDB;
+import io.backend.api.utils.AuthenticateUtils;
 import io.backend.api.utils.ServiceUtils;
 import org.bson.types.ObjectId;
 import play.api.mvc.Request;
@@ -41,24 +42,11 @@ public class AuthenticatedAction extends Action<Authenticated> {
     @BodyParser.Of(BodyParser.Json.class)
     public CompletionStage<Result> call(Http.Request request) {
         try {
-            String token = ServiceUtils.getTokenFromRequest(request);
-            String secret = config.getString("play.http.secret.key");
-            Algorithm algorithm = Algorithm.HMAC256(secret);
-            JWTVerifier verifier = JWT.require(algorithm)
-                    .build();
-            DecodedJWT jwt = verifier.verify(token);
-
-            String[] parts = token.split("\\.");
-
-            String payload = new String(Base64.getUrlDecoder().decode(parts[1]));
-            JsonNode tree = Json.mapper().readTree(payload);
-            String id = tree.get("id").asText();
-
-            User user = mongoDB
-                    .getMongoDatabase()
-                    .getCollection("users", User.class)
-                    .find(eq("_id", new ObjectId(id)))
-                    .first();
+            String token = AuthenticateUtils.getTokenFromRequest(request);
+            User user = AuthenticateUtils.verifyToken(token, config)
+                    .thenCompose(AuthenticateUtils::getIdFromToken)
+                    .thenCompose(id -> AuthenticateUtils.getUser(id, mongoDB))
+                    .join();
 
             request = request.addAttr(Attributes.USER_TYPED_KEY, user);
             return delegate.call(request);
