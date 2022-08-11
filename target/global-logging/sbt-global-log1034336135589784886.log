@@ -240,3 +240,323 @@
 [0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
 [0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Scala sources and 6 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/model/Chat.java:8:1: Generating equals/hashCode implementation but without a call to superclass, even though this class does not extend java.lang.Object. If this is intentional, add '@EqualsAndHashCode(callSuper=false)' to your type.[0m
+[0m[[0m[33mwarn[0m] [0m[0m@Data[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/DashboardService.java:109:1: javax.swing.text.Document is abstract; cannot be instantiated[0m
+[0m[[0m[31merror[0m] [0m[0mnew Document("$graphLookup",[0m
+[0m[[0m[31merror[0m] [0m[0m                            new Document("from", "dashboards")[0m
+[0m[[0m[31merror[0m] [0m[0m                                    .append("startWith", "$_id")[0m
+[0m[[0m[31merror[0m] [0m[0m                                    .append("connectFromField", "id")[0m
+[0m[[0m[31merror[0m] [0m[0m                                    .append("connectToField", "parentId")[0m
+[0m[[0m[31merror[0m] [0m[0m                                    .append("as", "children")[0m
+[0m[[0m[31merror[0m] [0m[0m                                    .append("depthField", "level"))[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) javac returned non-zero exit code[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Scala sources and 6 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/model/Chat.java:8:1: Generating equals/hashCode implementation but without a call to superclass, even though this class does not extend java.lang.Object. If this is intentional, add '@EqualsAndHashCode(callSuper=false)' to your type.[0m
+[0m[[0m[33mwarn[0m] [0m[0m@Data[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source and 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/DashboardService.java:111:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   variable collection[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class io.backend.api.sevices.DashboardService[0m
+[0m[[0m[31merror[0m] [0m[0mcollection[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/DashboardService.java:139:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   method getChildren()[0m
+[0m[[0m[31merror[0m] [0m[0m  location: variable d of type io.backend.api.model.Dashboard[0m
+[0m[[0m[31merror[0m] [0m[0md.getChildren[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/DashboardService.java:142:1: variable dashboard is already defined in method hierarchy(io.backend.api.model.Dashboard)[0m
+[0m[[0m[31merror[0m] [0m[0mDashboard dashboard[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/DashboardService.java:143:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   method getChildren()[0m
+[0m[[0m[31merror[0m] [0m[0m  location: variable dashboard of type io.backend.api.model.Dashboard[0m
+[0m[[0m[31merror[0m] [0m[0mdashboard.getChildren[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/DashboardService.java:144:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   method setChildren(java.util.List<io.backend.api.model.Dashboard>)[0m
+[0m[[0m[31merror[0m] [0m[0m  location: variable x of type io.backend.api.model.Dashboard[0m
+[0m[[0m[31merror[0m] [0m[0mx.setChildren[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) javac returned non-zero exit code[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/DashboardService.java:111:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   variable collection[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class io.backend.api.sevices.DashboardService[0m
+[0m[[0m[31merror[0m] [0m[0mcollection[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/DashboardService.java:139:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   method getChildren()[0m
+[0m[[0m[31merror[0m] [0m[0m  location: variable d of type io.backend.api.model.Dashboard[0m
+[0m[[0m[31merror[0m] [0m[0md.getChildren[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/DashboardService.java:142:1: variable dashboard is already defined in method hierarchy(io.backend.api.model.Dashboard)[0m
+[0m[[0m[31merror[0m] [0m[0m (Dashboard dashboa[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/DashboardService.java:143:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   method getChildren()[0m
+[0m[[0m[31merror[0m] [0m[0m  location: variable dashboard of type io.backend.api.model.Dashboard[0m
+[0m[[0m[31merror[0m] [0m[0m: dashboard.getChildr[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/DashboardService.java:144:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   method setChildren(java.util.List<io.backend.api.model.Dashboard>)[0m
+[0m[[0m[31merror[0m] [0m[0m  location: variable x of type io.backend.api.model.Dashboard[0m
+[0m[[0m[31merror[0m] [0m[0m  x.setChildr[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) javac returned non-zero exit code[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/DashboardService.java:139:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   method getChildren()[0m
+[0m[[0m[31merror[0m] [0m[0m  location: variable d of type io.backend.api.model.Dashboard[0m
+[0m[[0m[31merror[0m] [0m[0md.getChildren[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/DashboardService.java:142:1: variable dashboard is already defined in method hierarchy(io.backend.api.model.Dashboard)[0m
+[0m[[0m[31merror[0m] [0m[0mDashboard dashboard[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/DashboardService.java:143:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   method getChildren()[0m
+[0m[[0m[31merror[0m] [0m[0m  location: variable dashboard of type io.backend.api.model.Dashboard[0m
+[0m[[0m[31merror[0m] [0m[0mdashboard.getChildren[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/DashboardService.java:144:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   method setChildren(java.util.List<io.backend.api.model.Dashboard>)[0m
+[0m[[0m[31merror[0m] [0m[0m  location: variable x of type io.backend.api.model.Dashboard[0m
+[0m[[0m[31merror[0m] [0m[0mx.setChildren[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) javac returned non-zero exit code[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/DashboardService.java:139:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   method getLevel()[0m
+[0m[[0m[31merror[0m] [0m[0m  location: variable x of type io.backend.api.model.Dashboard[0m
+[0m[[0m[31merror[0m] [0m[0mx.getLevel[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/DashboardService.java:142:1: variable dashboard is already defined in method hierarchy(io.backend.api.model.Dashboard)[0m
+[0m[[0m[31merror[0m] [0m[0mDashboard dashboard[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) javac returned non-zero exit code[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn the last 4851 seconds, 6.174 (0.1%) were spent in GC. [Heap: 0.70GB free of 1.00GB, max 1.00GB] Consider increasing the JVM heap using `-Xmx` or try a different collector, e.g. `-XX:+UseG1GC`, for better performance.[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn the last 10 seconds, 5.111 (52.2%) were spent in GC. [Heap: 0.71GB free of 1.00GB, max 1.00GB] Consider increasing the JVM heap using `-Xmx` or try a different collector, e.g. `-XX:+UseG1GC`, for better performance.[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn the last 1393 seconds, 5.32 (0.4%) were spent in GC. [Heap: 0.71GB free of 1.00GB, max 1.00GB] Consider increasing the JVM heap using `-Xmx` or try a different collector, e.g. `-XX:+UseG1GC`, for better performance.[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn the last 748 seconds, 5.437 (0.7%) were spent in GC. [Heap: 0.71GB free of 1.00GB, max 1.00GB] Consider increasing the JVM heap using `-Xmx` or try a different collector, e.g. `-XX:+UseG1GC`, for better performance.[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/DashboardService.java:113:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   method into(java.util.ArrayList<java.lang.Object>)[0m
+[0m[[0m[31merror[0m] [0m[0m  location: interface com.mongodb.client.MongoCollection<io.backend.api.model.Dashboard>[0m
+[0m[[0m[31merror[0m] [0m[0mmongoDB.getMongoDatabase()[0m
+[0m[[0m[31merror[0m] [0m[0m                        .getCollection("dashboards", Dashboard.class)[0m
+[0m[[0m[31merror[0m] [0m[0m                        .into[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/DashboardService.java:140:1: variable id is already defined in method hierarchy()[0m
+[0m[[0m[31merror[0m] [0m[0mList<ObjectId> id = dashboards.stream().map(BaseModel::getId).collect(Collectors.toList());[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/DashboardService.java:142:1: variable content is already defined in method hierarchy()[0m
+[0m[[0m[31merror[0m] [0m[0mList<Content> content = mongoDB.getMongoDatabase().getCollection("contents", Content.class)[0m
+[0m[[0m[31merror[0m] [0m[0m                        .find()[0m
+[0m[[0m[31merror[0m] [0m[0m                        .filter(Filters.in("dashboardID", id))[0m
+[0m[[0m[31merror[0m] [0m[0m                        .into(new ArrayList<>());[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) javac returned non-zero exit code[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/DashboardService.java:117:1: ';' expected[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) javac returned non-zero exit code[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn the last 828 seconds, 7.677 (0.9%) were spent in GC. [Heap: 0.70GB free of 1.00GB, max 1.00GB] Consider increasing the JVM heap using `-Xmx` or try a different collector, e.g. `-XX:+UseG1GC`, for better performance.[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/sevices/DashboardService.java:117:1: ';' expected[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) javac returned non-zero exit code[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/controllers/BackendAPI_Controller.java:98:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   variable mongoDB[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class io.backend.api.controllers.BackendAPI_Controller[0m
+[0m[[0m[31merror[0m] [0m[0mmongoDB[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn the last 9 seconds, 6.552 (74.9%) were spent in GC. [Heap: 0.70GB free of 1.00GB, max 1.00GB] Consider increasing the JVM heap using `-Xmx` or try a different collector, e.g. `-XX:+UseG1GC`, for better performance.[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) javac returned non-zero exit code[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/conf/routes:11:1: value verify is not a member of io.backend.api.controllers.BackendAPI_Controller[0m
+[0m[[0m[31merror[0m] [0m[0mPOST          /api/verify/                                 @io.backend.api.controllers.BackendAPI_Controller.verify(request: Request)[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/conf/routes:11:1: value verify is not a member of io.backend.api.controllers.BackendAPI_Controller[0m
+[0m[[0m[31merror[0m] [0m[0mPOST          /api/verify/                                 @io.backend.api.controllers.BackendAPI_Controller.verify(request: Request)[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/conf/routes:11:1: value verify is not a member of io.backend.api.controllers.BackendAPI_Controller[0m
+[0m[[0m[31merror[0m] [0m[0mPOST          /api/verify/                                 @io.backend.api.controllers.BackendAPI_Controller.verify(request: Request)[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/conf/routes:11:1: value verify is not a member of io.backend.api.controllers.BackendAPI_Controller[0m
+[0m[[0m[31merror[0m] [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Scala sources and 3 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source and 2 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source and 2 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/conf/routes:10:1: type BackendAPI_Controller is not a member of package io.backend.api.controllers[0m
+[0m[[0m[31merror[0m] [0m[0mPOST          /api/authenticate/                           @io.backend.api.controllers.BackendAPI_Controller.authenticate(request: Request)[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/conf/routes:10:1: type BackendAPI_Controller is not a member of package io.backend.api.controllers[0m
+[0m[[0m[31merror[0m] [0m[0mPOST          /api/authenticate/                           @io.backend.api.controllers.BackendAPI_Controller.authenticate(request: Request)[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/conf/routes:10:1: type BackendAPI_Controller is not a member of package io.backend.api.controllers[0m
+[0m[[0m[31merror[0m] [0m[0mPOST          /api/authenticate/                           @io.backend.api.controllers.BackendAPI_Controller.authenticate(request: Request)[0m
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Scala sources and 3 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m

@@ -10,7 +10,27 @@ import _root_.play.libs.F
 // @LINE:10
 package io.backend.api.controllers.javascript {
 
-  // @LINE:19
+  // @LINE:10
+  class ReverseAuthenticateController(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:10
+    def authenticate: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "io.backend.api.controllers.AuthenticateController.authenticate",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "api/authenticate/"})
+        }
+      """
+    )
+  
+  }
+
+  // @LINE:18
   class ReverseUser_Controller(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -18,7 +38,7 @@ package io.backend.api.controllers.javascript {
     }
 
   
-    // @LINE:19
+    // @LINE:18
     def create: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "io.backend.api.controllers.User_Controller.create",
       """
@@ -28,7 +48,7 @@ package io.backend.api.controllers.javascript {
       """
     )
   
-    // @LINE:20
+    // @LINE:19
     def read: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "io.backend.api.controllers.User_Controller.read",
       """
@@ -38,7 +58,7 @@ package io.backend.api.controllers.javascript {
       """
     )
   
-    // @LINE:21
+    // @LINE:20
     def update: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "io.backend.api.controllers.User_Controller.update",
       """
@@ -48,7 +68,7 @@ package io.backend.api.controllers.javascript {
       """
     )
   
-    // @LINE:22
+    // @LINE:21
     def delete: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "io.backend.api.controllers.User_Controller.delete",
       """
@@ -60,7 +80,7 @@ package io.backend.api.controllers.javascript {
   
   }
 
-  // @LINE:29
+  // @LINE:28
   class ReverseChatRoomController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -68,7 +88,7 @@ package io.backend.api.controllers.javascript {
     }
 
   
-    // @LINE:29
+    // @LINE:28
     def chat: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "io.backend.api.controllers.ChatRoomController.chat",
       """
@@ -80,7 +100,7 @@ package io.backend.api.controllers.javascript {
   
   }
 
-  // @LINE:13
+  // @LINE:12
   class ReverseDashboard_Contoller(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -89,16 +109,6 @@ package io.backend.api.controllers.javascript {
 
   
     // @LINE:13
-    def create: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "io.backend.api.controllers.Dashboard_Contoller.create",
-      """
-        function() {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "api/dashboard/"})
-        }
-      """
-    )
-  
-    // @LINE:14
     def read: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "io.backend.api.controllers.Dashboard_Contoller.read",
       """
@@ -109,16 +119,6 @@ package io.backend.api.controllers.javascript {
     )
   
     // @LINE:15
-    def update: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "io.backend.api.controllers.Dashboard_Contoller.update",
-      """
-        function(id0) {
-          return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "api/dashboard/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("id", id0))})
-        }
-      """
-    )
-  
-    // @LINE:16
     def delete: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "io.backend.api.controllers.Dashboard_Contoller.delete",
       """
@@ -128,39 +128,39 @@ package io.backend.api.controllers.javascript {
       """
     )
   
-  }
-
-  // @LINE:10
-  class ReverseBackendAPI_Controller(_prefix: => String) {
-
-    def _defaultPrefix: String = {
-      if (_prefix.endsWith("/")) "" else "/"
-    }
-
-  
-    // @LINE:10
-    def authenticate: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "io.backend.api.controllers.BackendAPI_Controller.authenticate",
+    // @LINE:16
+    def hierarchy: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "io.backend.api.controllers.Dashboard_Contoller.hierarchy",
       """
         function() {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "api/authenticate/"})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "api/dashboard/hierarchy"})
         }
       """
     )
   
-    // @LINE:11
-    def verify: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "io.backend.api.controllers.BackendAPI_Controller.verify",
+    // @LINE:14
+    def update: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "io.backend.api.controllers.Dashboard_Contoller.update",
+      """
+        function(id0) {
+          return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "api/dashboard/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
+    // @LINE:12
+    def create: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "io.backend.api.controllers.Dashboard_Contoller.create",
       """
         function() {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "api/verify/"})
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "api/dashboard/"})
         }
       """
     )
   
   }
 
-  // @LINE:24
+  // @LINE:23
   class ReverseContent_Controller(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -168,7 +168,7 @@ package io.backend.api.controllers.javascript {
     }
 
   
-    // @LINE:24
+    // @LINE:23
     def create: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "io.backend.api.controllers.Content_Controller.create",
       """
@@ -178,7 +178,7 @@ package io.backend.api.controllers.javascript {
       """
     )
   
-    // @LINE:25
+    // @LINE:24
     def read: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "io.backend.api.controllers.Content_Controller.read",
       """
@@ -188,7 +188,7 @@ package io.backend.api.controllers.javascript {
       """
     )
   
-    // @LINE:26
+    // @LINE:25
     def update: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "io.backend.api.controllers.Content_Controller.update",
       """
@@ -198,7 +198,7 @@ package io.backend.api.controllers.javascript {
       """
     )
   
-    // @LINE:27
+    // @LINE:26
     def delete: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "io.backend.api.controllers.Content_Controller.delete",
       """

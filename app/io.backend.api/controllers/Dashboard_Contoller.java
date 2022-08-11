@@ -85,4 +85,11 @@ public class Dashboard_Contoller extends Controller {
                 .exceptionally(DatabaseUtils::throwableToResult);
     }
 
+//    @BodyParser.Of(BodyParser.Json.class)
+    public CompletableFuture<Result> hierarchy(Http.Request request) {
+        return service.hierarchy()
+                .thenCompose((data) -> serializationService.toJsonNode(data))
+                .thenApply(Results::ok)
+                .exceptionally(DatabaseUtils::throwableToResult);
+    }
 }
