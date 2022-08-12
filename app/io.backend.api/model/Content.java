@@ -35,5 +35,5 @@ public class Content extends BaseModel{
 
     @BsonIgnore
     Usage type= Usage.NONE ;
-    ObjectId dashboardID;
+    ObjectId dashboardId;
 }

@@ -560,3 +560,81 @@
 [0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
 [0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[33mwarn[0m] [0m[0mIn the last 854 seconds, 5.917 (0.7%) were spent in GC. [Heap: 0.69GB free of 1.00GB, max 1.00GB] Consider increasing the JVM heap using `-Xmx` or try a different collector, e.g. `-XX:+UseG1GC`, for better performance.[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/model/ImageDashboard.java:7:1: Generating equals/hashCode implementation but without a call to superclass, even though this class does not extend java.lang.Object. If this is intentional, add '@EqualsAndHashCode(callSuper=false)' to your type.[0m
+[0m[[0m[33mwarn[0m] [0m[0m@Data[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 9 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/model/TextDashboard.java:9:1: Generating equals/hashCode implementation but without a call to superclass, even though this class does not extend java.lang.Object. If this is intentional, add '@EqualsAndHashCode(callSuper=false)' to your type.[0m
+[0m[[0m[33mwarn[0m] [0m[0m@Data[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/model/LineDashboard.java:9:1: Generating equals/hashCode implementation but without a call to superclass, even though this class does not extend java.lang.Object. If this is intentional, add '@EqualsAndHashCode(callSuper=false)' to your type.[0m
+[0m[[0m[33mwarn[0m] [0m[0m@Data[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/model/EmailDashboard.java:9:1: Generating equals/hashCode implementation but without a call to superclass, even though this class does not extend java.lang.Object. If this is intentional, add '@EqualsAndHashCode(callSuper=false)' to your type.[0m
+[0m[[0m[33mwarn[0m] [0m[0m@Data[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source and 12 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/model/LineDashboard.java:9:1: Generating equals/hashCode implementation but without a call to superclass, even though this class does not extend java.lang.Object. If this is intentional, add '@EqualsAndHashCode(callSuper=false)' to your type.[0m
+[0m[[0m[33mwarn[0m] [0m[0m@Data[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/model/ImageDashboard.java:7:1: Generating equals/hashCode implementation but without a call to superclass, even though this class does not extend java.lang.Object. If this is intentional, add '@EqualsAndHashCode(callSuper=false)' to your type.[0m
+[0m[[0m[33mwarn[0m] [0m[0m@Data[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/model/TextDashboard.java:9:1: Generating equals/hashCode implementation but without a call to superclass, even though this class does not extend java.lang.Object. If this is intentional, add '@EqualsAndHashCode(callSuper=false)' to your type.[0m
+[0m[[0m[33mwarn[0m] [0m[0m@Data[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/model/EmailDashboard.java:9:1: Generating equals/hashCode implementation but without a call to superclass, even though this class does not extend java.lang.Object. If this is intentional, add '@EqualsAndHashCode(callSuper=false)' to your type.[0m
+[0m[[0m[33mwarn[0m] [0m[0m@Data[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m

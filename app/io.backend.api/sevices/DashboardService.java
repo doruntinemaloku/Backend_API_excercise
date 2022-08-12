@@ -35,8 +35,8 @@ public class DashboardService {
 
     public CompletableFuture<List<Dashboard>> read(User user) {
         return CompletableFuture.supplyAsync(() -> {
+            try{
             int skip = 0, limit = 100;
-
             List<Dashboard> dashboards = mongoDB.getMongoDatabase()
                     .getCollection("dashboards", Dashboard.class)
                     .find(AccessUtils.readAccess(user))
@@ -48,13 +48,16 @@ public class DashboardService {
 
             List<Content> content = mongoDB.getMongoDatabase().getCollection("contents", Content.class)
                     .find()
-                    .filter(Filters.in("dashboardID", id))
+                    .filter(Filters.in("dashboardId", id))
                     .into(new ArrayList<>());
 
             dashboards.forEach(x -> x.setItems(content.stream()
-                    .filter(y -> y.getDashboardID().equals(x.getId()))
+                    .filter(y -> y.getDashboardId().equals(x.getId()))
                     .collect(Collectors.toList())));
-            return dashboards;
+            return dashboards;}
+            catch(Exception e){
+                e.printStackTrace();
+            } return null;
         }, ec.current());
     }
 
@@ -124,12 +127,27 @@ public class DashboardService {
                         .aggregate(pipeline, Dashboard.class)
                         .into(new ArrayList<>());
 
+                List<ObjectId> id = dashboards.stream().map(BaseModel::getId).collect(Collectors.toList());
+
+                List<Content> content = mongoDB.getMongoDatabase().getCollection("contents", Content.class)
+                        .find()
+                        .filter(Filters.in("dashboardId", id))
+                        .into(new ArrayList<>());
+
+                dashboards.forEach(x -> x.setItems(content.stream()
+                        .filter(y -> y.getDashboardId().equals(x.getId()))
+                        .collect(Collectors.toList())));
+
+
                 dashboards.forEach(d->{
                     List<Dashboard> children= d.getChildren();
                     List<Dashboard> prinderit = children.stream()
                             .reduce(new ArrayList<>(), (lista, x) -> {
                                 x.setChildren(children.stream()
                                         .filter(u -> x.getId().equals(u.getParentId()))
+                                        .collect(Collectors.toList()));
+                                x.setItems(content.stream()
+                                        .filter(y -> y.getDashboardId().equals(x.getId()))
                                         .collect(Collectors.toList()));
                                 if (x.getLevel() == 0) {
                                     lista.add(x);

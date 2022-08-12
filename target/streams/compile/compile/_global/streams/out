@@ -1,7 +1,8 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/conf/routes:10:1: type BackendAPI_Controller is not a member of package io.backend.api.controllers[0m
-[0m[[0m[31merror[0m] [0m[0mPOST          /api/authenticate/                           @io.backend.api.controllers.BackendAPI_Controller.authenticate(request: Request)[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/conf/routes:10:1: type BackendAPI_Controller is not a member of package io.backend.api.controllers[0m
-[0m[[0m[31merror[0m] [0m[0mPOST          /api/authenticate/                           @io.backend.api.controllers.BackendAPI_Controller.authenticate(request: Request)[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/conf/routes:10:1: type BackendAPI_Controller is not a member of package io.backend.api.controllers[0m
-[0m[[0m[31merror[0m] [0m[0mPOST          /api/authenticate/                           @io.backend.api.controllers.BackendAPI_Controller.authenticate(request: Request)[0m
-[0m[[0m[31merror[0m] [0m[0mthree errors found[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/model/ImageDashboard.java:7:1: Generating equals/hashCode implementation but without a call to superclass, even though this class does not extend java.lang.Object. If this is intentional, add '@EqualsAndHashCode(callSuper=false)' to your type.[0m
+[0m[[0m[33mwarn[0m] [0m[0m@Data[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/model/EmailDashboard.java:9:1: Generating equals/hashCode implementation but without a call to superclass, even though this class does not extend java.lang.Object. If this is intentional, add '@EqualsAndHashCode(callSuper=false)' to your type.[0m
+[0m[[0m[33mwarn[0m] [0m[0m@Data[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/model/LineDashboard.java:9:1: Generating equals/hashCode implementation but without a call to superclass, even though this class does not extend java.lang.Object. If this is intentional, add '@EqualsAndHashCode(callSuper=false)' to your type.[0m
+[0m[[0m[33mwarn[0m] [0m[0m@Data[0m
+[0m[[0m[33mwarn[0m] [0m[0m/Users/doruntinemaloku/Documents/Backend_API_Excersise/app/io.backend.api/model/TextDashboard.java:9:1: Generating equals/hashCode implementation but without a call to superclass, even though this class does not extend java.lang.Object. If this is intentional, add '@EqualsAndHashCode(callSuper=false)' to your type.[0m
+[0m[[0m[33mwarn[0m] [0m[0m@Data[0m

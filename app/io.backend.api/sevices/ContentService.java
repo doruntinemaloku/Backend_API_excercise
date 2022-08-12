@@ -40,7 +40,7 @@ public class ContentService {
                 MongoCollection<Content> collection = mongoDB.getMongoDatabase().getCollection("contents", Content.class);
                 collection.find(AccessUtils.writeAccess(user));
 
-                content.setDashboardID(new ObjectId(id));
+                content.setDashboardId(new ObjectId(id));
                 collection.insertOne(content);
 
                 return content;
@@ -59,7 +59,7 @@ public class ContentService {
             collection.find(AccessUtils.writeAccess(user));
             //Update one content from database if it is already in it, if not return notFound
             if (ObjectId.isValid(id)) {
-                content.setDashboardID(new ObjectId(id));
+                content.setDashboardId(new ObjectId(id));
                 collection.replaceOne(Filters.eq("_id", new ObjectId(contentId)), content);
 
                 return content;

@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import org.bson.codecs.pojo.annotations.BsonProperty;
 import org.bson.types.ObjectId;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @EqualsAndHashCode(callSuper = true)
@@ -18,13 +19,10 @@ public class Dashboard extends BaseModel {
     String name;
     String description;
     ObjectId parentId;
-    Long createdAt;
-    List<String> readACL;
-    List<String> writeACL;
+    List<String> readACL= new ArrayList<>();
+    List<String> writeACL= new ArrayList<>();
 
-    List<Dashboard> children;
-    List<Content> items;
-
-    @BsonProperty
+    List<Dashboard> children= new ArrayList<>();
+    List<Content> items= new ArrayList<>();
     Integer level;
 }
