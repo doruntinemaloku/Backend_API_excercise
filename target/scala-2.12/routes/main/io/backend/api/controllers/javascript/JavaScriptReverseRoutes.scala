@@ -182,8 +182,8 @@ package io.backend.api.controllers.javascript {
     def read: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "io.backend.api.controllers.Content_Controller.read",
       """
-        function(id0) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "api/dashboard/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("id", id0)) + "/content/"})
+        function(skip0,limit1,id2) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "api/dashboard/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("id", id2)) + "/content/" + _qS([(skip0 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[Int]].javascriptUnbind + """)("skip", skip0)), (limit1 == null ? null : (""" + implicitly[play.api.mvc.QueryStringBindable[Int]].javascriptUnbind + """)("limit", limit1))])})
         }
       """
     )

@@ -30,8 +30,8 @@ public class Content_Controller {
      * @param request HTTP request
      * @return
      */
-    public CompletableFuture<Result> read(Http.Request request, String id) {
-        return service.read(id, ServiceUtils.getUserFrom(request))
+    public CompletableFuture<Result> read(int skip, int limit, Http.Request request, String id) {
+        return service.read(skip, limit, id, ServiceUtils.getUserFrom(request))
                 .thenCompose((data) -> serializationService.toJsonNode(data))
                 .thenApply(Results::ok)
                 .exceptionally(DatabaseUtils::throwableToResult);

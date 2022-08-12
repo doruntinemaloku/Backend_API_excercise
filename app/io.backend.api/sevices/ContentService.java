@@ -25,12 +25,15 @@ public class ContentService {
     @Inject
     IMongoDB mongoDB;
 
-    public CompletableFuture<List<Content>> read(String id, User user) {
+    public CompletableFuture<List<Content>> read(int skip, int limit, String id, User user) {
         return CompletableFuture.supplyAsync(() -> {
-            MongoCollection<Content> collection = mongoDB.getMongoDatabase().getCollection("contents", Content.class);
-            collection.find(AccessUtils.readAccess(user));
-
-            return collection.find().filter(Filters.eq("dashboardID", new ObjectId(id))).into(new ArrayList<>());
+            return mongoDB.getMongoDatabase()
+                    .getCollection("contents", Content.class)
+                    .find(AccessUtils.readAccess(user))
+                    .filter(Filters.eq("dashboardId", new ObjectId(id)))
+                    .skip(skip)
+                    .limit(limit)
+                    .into(new ArrayList<>());
         }, ec.current());
     }
 

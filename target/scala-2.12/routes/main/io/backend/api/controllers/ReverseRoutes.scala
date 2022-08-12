@@ -126,9 +126,9 @@ package io.backend.api.controllers {
     }
   
     // @LINE:24
-    def read(id:String): Call = {
+    def read(skip:Int = 0, limit:Int = 50, id:String): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "api/dashboard/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[String]].unbind("id", id)) + "/content/")
+      Call("GET", _prefix + { _defaultPrefix } + "api/dashboard/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[String]].unbind("id", id)) + "/content/" + play.core.routing.queryString(List(if(skip == 0) None else Some(implicitly[play.api.mvc.QueryStringBindable[Int]].unbind("skip", skip)), if(limit == 50) None else Some(implicitly[play.api.mvc.QueryStringBindable[Int]].unbind("limit", limit)))))
     }
   
     // @LINE:25

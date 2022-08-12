@@ -67,7 +67,7 @@ class Routes(
     ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/user/""" + "$" + """id<[^/]+>""", """@io.backend.api.controllers.User_Controller@.update(request:Request, id:String)"""),
     ("""DELETE""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/user/""" + "$" + """id<[^/]+>""", """@io.backend.api.controllers.User_Controller@.delete(request:Request, id:String)"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/dashboard/""" + "$" + """id<[^/]+>/content/""", """@io.backend.api.controllers.Content_Controller@.create(request:Request, id:String)"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/dashboard/""" + "$" + """id<[^/]+>/content/""", """@io.backend.api.controllers.Content_Controller@.read(request:Request, id:String)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/dashboard/""" + "$" + """id<[^/]+>/content/""", """@io.backend.api.controllers.Content_Controller@.read(skip:Int ?= 0, limit:Int ?= 50, request:Request, id:String)"""),
     ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/dashboard/""" + "$" + """id<[^/]+>/content/""" + "$" + """contentId<[^/]+>""", """@io.backend.api.controllers.Content_Controller@.update(request:Request, id:String, contentId:String)"""),
     ("""DELETE""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/dashboard/""" + "$" + """id<[^/]+>/content/""" + "$" + """contentId<[^/]+>""", """@io.backend.api.controllers.Content_Controller@.delete(request:Request, id:String, contentId:String)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/chat/""" + "$" + """roomId<[^/]+>""", """@io.backend.api.controllers.ChatRoomController@.chat(roomId:String, token:String ?= "")"""),
@@ -323,12 +323,12 @@ class Routes(
   private[this] lazy val io_backend_api_controllers_Content_Controller_read12_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
-      Content_Controller_4.get.read(fakeValue[play.mvc.Http.Request], fakeValue[String]),
+      Content_Controller_4.get.read(fakeValue[Int], fakeValue[Int], fakeValue[play.mvc.Http.Request], fakeValue[String]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "io.backend.api.controllers.Content_Controller",
       "read",
-      Seq(classOf[play.mvc.Http.Request], classOf[String]),
+      Seq(classOf[Int], classOf[Int], classOf[play.mvc.Http.Request], classOf[String]),
       "GET",
       this.prefix + """api/dashboard/""" + "$" + """id<[^/]+>/content/""",
       """""",
@@ -482,9 +482,9 @@ class Routes(
   
     // @LINE:24
     case io_backend_api_controllers_Content_Controller_read12_route(params@_) =>
-      call(params.fromPath[String]("id", None)) { (id) =>
+      call(params.fromQuery[Int]("skip", Some(0)), params.fromQuery[Int]("limit", Some(50)), params.fromPath[String]("id", None)) { (skip, limit, id) =>
         io_backend_api_controllers_Content_Controller_read12_invoker.call(
-          req => Content_Controller_4.get.read(req, id))
+          req => Content_Controller_4.get.read(skip, limit, req, id))
       }
   
     // @LINE:25

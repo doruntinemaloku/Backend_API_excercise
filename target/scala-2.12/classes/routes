@@ -21,7 +21,7 @@ PUT           /api/user/:id                                @io.backend.api.contr
 DELETE        /api/user/:id                                @io.backend.api.controllers.User_Controller.delete(request: Request, id:String)
 
 POST          /api/dashboard/:id/content/                  @io.backend.api.controllers.Content_Controller.create(request: Request, id: String)
-GET           /api/dashboard/:id/content/                  @io.backend.api.controllers.Content_Controller.read(request: Request, id: String)
+GET           /api/dashboard/:id/content/                  @io.backend.api.controllers.Content_Controller.read(skip: Int ?= 0, limit: Int ?= 50, request: Request, id: String)
 PUT           /api/dashboard/:id/content/:contentId        @io.backend.api.controllers.Content_Controller.update(request: Request,id: String, contentId: String)
 DELETE        /api/dashboard/:id/content/:contentId        @io.backend.api.controllers.Content_Controller.delete(request: Request,id: String, contentId:String)
 

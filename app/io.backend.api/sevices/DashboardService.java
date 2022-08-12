@@ -19,6 +19,7 @@ import play.libs.concurrent.HttpExecutionContext;
 import play.mvc.Http;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
@@ -127,14 +128,20 @@ public class DashboardService {
                         .aggregate(pipeline, Dashboard.class)
                         .into(new ArrayList<>());
 
-                List<ObjectId> id = dashboards.stream().map(BaseModel::getId).collect(Collectors.toList());
+                List<Dashboard> dashboardsFlat = dashboards.stream()
+                        .map(Dashboard::getChildren)
+                        .flatMap(Collection::stream)
+                        .collect(Collectors.toList());
+                dashboardsFlat.addAll(dashboards);
+
+                List<ObjectId> id = dashboardsFlat.stream().map(BaseModel::getId).collect(Collectors.toList());
 
                 List<Content> content = mongoDB.getMongoDatabase().getCollection("contents", Content.class)
                         .find()
                         .filter(Filters.in("dashboardId", id))
                         .into(new ArrayList<>());
 
-                dashboards.forEach(x -> x.setItems(content.stream()
+                dashboardsFlat.forEach(x -> x.setItems(content.stream()
                         .filter(y -> y.getDashboardId().equals(x.getId()))
                         .collect(Collectors.toList())));
 
@@ -145,9 +152,6 @@ public class DashboardService {
                             .reduce(new ArrayList<>(), (lista, x) -> {
                                 x.setChildren(children.stream()
                                         .filter(u -> x.getId().equals(u.getParentId()))
-                                        .collect(Collectors.toList()));
-                                x.setItems(content.stream()
-                                        .filter(y -> y.getDashboardId().equals(x.getId()))
                                         .collect(Collectors.toList()));
                                 if (x.getLevel() == 0) {
                                     lista.add(x);
