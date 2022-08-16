@@ -12,14 +12,17 @@ public class AccessUtils {
                 Filters.or(
                         Filters.in("readACL", user.getId().toString()),
                         Filters.in("writeACL", user.getId().toString()),
+
                         Filters.in("readACL", user.getRoles()),
-                        Filters.in("writeACL", user.getRoles())
+                        Filters.in("writeACL", user.getRoles()),
+
+                        Filters.in("readACL", "*"),
+                        Filters.in("writeACL", "*")
                 ),
                 Filters.and(
                         Filters.eq("readACL", new ArrayList<>()),
                         Filters.eq("writeACL", new ArrayList<>())
                 )
-
         );
     }
 
@@ -27,7 +30,8 @@ public class AccessUtils {
         return Filters.and(
                 Filters.or(
                         Filters.in("writeACL", user.getId().toString()),
-                        Filters.in("writeACL", user.getRoles())
+                        Filters.in("writeACL", user.getRoles()),
+                        Filters.in("writeACL", "*")
                 ),
                 Filters.and(
                         Filters.eq("readACL", new ArrayList<>()),

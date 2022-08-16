@@ -144,10 +144,12 @@ public class DashboardService {
      * Get the Dashboards and their hierarchy
      * @return return list of Dashboards
      */
-    public CompletableFuture<List<Dashboard>> hierarchy() {
+    public CompletableFuture<List<Dashboard>> hierarchy(User user) {
         return CompletableFuture.supplyAsync(() -> {
             try {
                 MongoCollection<Dashboard> collection = mongoDB.getMongoDatabase().getCollection("dashboards", Dashboard.class);
+                collection.find(AccessUtils.readAccess(user));
+
 
                 List<Bson> pipeline = new ArrayList<>();
                 pipeline.add(Aggregates.match(eq("parentId", new BsonNull())));

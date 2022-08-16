@@ -9,20 +9,20 @@ GET           /assets/*file                                controllers.Assets.ve
 
 POST          /api/authenticate/                           @io.backend.api.controllers.AuthenticateController.authenticate(request: Request)
 
-POST          /api/dashboard/                              @io.backend.api.controllers.Dashboard_Contoller.create( request: Request)
-GET           /api/dashboard/                              @io.backend.api.controllers.Dashboard_Contoller.read(skip: Int ?= 0, limit: Int ?= 50, request: Request)
-PUT           /api/dashboard/:id                           @io.backend.api.controllers.Dashboard_Contoller.update(request: Request, id: String)
-DELETE        /api/dashboard/:id                           @io.backend.api.controllers.Dashboard_Contoller.delete(request: Request, id:String)
-GET           /api/dashboard/hierarchy                     @io.backend.api.controllers.Dashboard_Contoller.hierarchy(request: Request)
+POST          /api/dashboard/                              @io.backend.api.controllers.DashboardContoller.create( request: Request)
+GET           /api/dashboard/                              @io.backend.api.controllers.DashboardContoller.read(skip: Int ?= 0, limit: Int ?= 50, request: Request)
+PUT           /api/dashboard/:id                           @io.backend.api.controllers.DashboardContoller.update(request: Request, id: String)
+DELETE        /api/dashboard/:id                           @io.backend.api.controllers.DashboardContoller.delete(request: Request, id:String)
+GET           /api/dashboard/hierarchy                     @io.backend.api.controllers.DashboardContoller.hierarchy(request: Request)
 
-POST          /api/user/                                   @io.backend.api.controllers.User_Controller.create(request: Request)
-GET           /api/user/                                   @io.backend.api.controllers.User_Controller.read(request: Request)
-PUT           /api/user/:id                                @io.backend.api.controllers.User_Controller.update(request: Request, id: String)
-DELETE        /api/user/:id                                @io.backend.api.controllers.User_Controller.delete(request: Request, id:String)
+POST          /api/user/                                   @io.backend.api.controllers.UserController.create(request: Request)
+GET           /api/user/                                   @io.backend.api.controllers.UserController.read(request: Request)
+PUT           /api/user/:id                                @io.backend.api.controllers.UserController.update(request: Request, id: String)
+DELETE        /api/user/:id                                @io.backend.api.controllers.UserController.delete(request: Request, id:String)
 
-POST          /api/dashboard/:id/content/                  @io.backend.api.controllers.Content_Controller.create(request: Request, id: String)
-GET           /api/dashboard/:id/content/                  @io.backend.api.controllers.Content_Controller.read(skip: Int ?= 0, limit: Int ?= 50, request: Request, id: String)
-PUT           /api/dashboard/:id/content/:contentId        @io.backend.api.controllers.Content_Controller.update(request: Request,id: String, contentId: String)
-DELETE        /api/dashboard/:id/content/:contentId        @io.backend.api.controllers.Content_Controller.delete(request: Request,id: String, contentId:String)
+POST          /api/dashboard/:id/content/                  @io.backend.api.controllers.ContentController.create(request: Request, id: String)
+GET           /api/dashboard/:id/content/                  @io.backend.api.controllers.ContentController.read(skip: Int ?= 0, limit: Int ?= 50, request: Request, id: String)
+PUT           /api/dashboard/:id/content/:contentId        @io.backend.api.controllers.ContentController.update(request: Request,id: String, contentId: String)
+DELETE        /api/dashboard/:id/content/:contentId        @io.backend.api.controllers.ContentController.delete(request: Request,id: String, contentId:String)
 
 GET           /api/chat/:roomId                            @io.backend.api.controllers.ChatRoomController.chat(roomId: String, token: String ?= "")

@@ -1,9 +1,7 @@
 package io.backend.api.controllers;
 
 import io.backend.api.actions.Authenticated;
-import io.backend.api.actions.Validated;
 import io.backend.api.model.Content;
-import io.backend.api.model.Dashboard;
 import io.backend.api.sevices.ContentService;
 import io.backend.api.sevices.SerializationService;
 import io.backend.api.utils.DatabaseUtils;
@@ -19,7 +17,7 @@ import javax.inject.Inject;
 import java.util.concurrent.CompletableFuture;
 
 @Authenticated
-public class Content_Controller {
+public class ContentController {
     @Inject
     SerializationService serializationService;
 

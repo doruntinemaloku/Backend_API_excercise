@@ -13,7 +13,7 @@ import javax.inject.Inject;
 import java.util.concurrent.CompletableFuture;
 
 @Authenticated
-public class Dashboard_Contoller extends Controller {
+public class DashboardContoller extends Controller {
     @Inject
     SerializationService serializationService;
 
@@ -84,7 +84,7 @@ public class Dashboard_Contoller extends Controller {
     }
 
     public CompletableFuture<Result> hierarchy(Http.Request request) {
-        return service.hierarchy()
+        return service.hierarchy(ServiceUtils.getUserFrom(request))
                 .thenCompose((data) -> serializationService.toJsonNode(data))
                 .thenApply(Results::ok)
                 .exceptionally(DatabaseUtils::throwableToResult);

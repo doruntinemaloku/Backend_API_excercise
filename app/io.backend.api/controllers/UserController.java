@@ -1,22 +1,17 @@
 package io.backend.api.controllers;
 
 
-import io.backend.api.actions.Authenticated;
-import io.backend.api.actions.Validated;
-import io.backend.api.model.Dashboard;
 import io.backend.api.model.User;
 import io.backend.api.sevices.SerializationService;
 import io.backend.api.sevices.UserService;
 import io.backend.api.utils.DatabaseUtils;
-import io.backend.api.utils.ServiceUtils;
 import play.mvc.*;
-import io.backend.api.sevices.DashboardService;
 
 import javax.inject.Inject;
 import java.util.concurrent.CompletableFuture;
 
 
-public class User_Controller extends Controller {
+public class UserController extends Controller {
     @Inject
     SerializationService serializationService;
 
