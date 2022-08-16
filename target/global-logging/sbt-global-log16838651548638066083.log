@@ -1,0 +1,11 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly DashboardTest, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / testOnly[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets-test:backend_api_excersise[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Java source to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/test-classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[33mwarn[0m] [0m[0mGetting the hostname OprimeKS-Mac-DoruntineM.local was slow (5005.148625 ms). This is likely because the computer's hostname is not set. You can set the hostname with the command: scutil --set HostName "$(scutil --get LocalHostName).local".[0m
+[0m[[0m[0minfo[0m] [0m[0mPassed: Total 7, Failed 0, Errors 0, Passed 7[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 97 s (01:37), completed Aug 16, 2022, 10:15:38 AM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(idea-shell, None, None)[0m

@@ -1,7 +1,9 @@
 package io.backend.api.controllers;
 
 import io.backend.api.actions.Authenticated;
+import io.backend.api.actions.Validated;
 import io.backend.api.model.Content;
+import io.backend.api.model.Dashboard;
 import io.backend.api.sevices.ContentService;
 import io.backend.api.sevices.SerializationService;
 import io.backend.api.utils.DatabaseUtils;
@@ -43,7 +45,7 @@ public class Content_Controller {
      * @param request HTTP request
      * @return
      */
-
+ //   @Validated(type = Content.class)
     @BodyParser.Of(BodyParser.Json.class)
     public CompletableFuture<Result> create(Http.Request request, String id) {
         return serializationService.parseBodyOfType(request, Content.class)
@@ -60,7 +62,7 @@ public class Content_Controller {
      * @param id      User Id
      * @return
      */
-
+  //  @Validated(type = Content.class)
     @BodyParser.Of(BodyParser.Json.class)
     public CompletableFuture<Result> update(Http.Request request, String id, String contentId) {
         return serializationService.parseBodyOfType(request, Content.class)

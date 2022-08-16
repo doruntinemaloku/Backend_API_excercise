@@ -23,6 +23,11 @@ public class UserService {
     @Inject
     IMongoDB mongoDB;
 
+    /**
+     * Get all users
+     *
+     * @return List of users
+     */
     public CompletableFuture<List<User>> read() {
         return CompletableFuture.supplyAsync(() -> {
             MongoCollection<User> collection = mongoDB.getMongoDatabase().getCollection("users", User.class);
@@ -31,6 +36,12 @@ public class UserService {
         }, ec.current());
     }
 
+    /**
+     * Create new user
+     *
+     * @param user you want to create
+     * @return the user you created
+     */
     public CompletableFuture<User> create(User user) {
         return CompletableFuture.supplyAsync(() -> {
             try {
@@ -48,6 +59,13 @@ public class UserService {
         }, ec.current());
     }
 
+    /**
+     * Update a User
+     *
+     * @param user updated user
+     * @param id the UserId you want to update
+     * @return the user you updated
+     */
     public CompletableFuture<User> update(User user, String id) {
         return CompletableFuture.supplyAsync(() -> {
             MongoCollection<User> collection = mongoDB.getMongoDatabase().getCollection("users", User.class);
@@ -63,6 +81,13 @@ public class UserService {
         }, ec.current());
     }
 
+    /**
+     * Delete a User
+     *
+     * @param user the user you want to delete
+     * @param id the userId you want to delete
+     * @return the deleted user
+     */
     public CompletableFuture<User> delete(User user, String id) {
         return CompletableFuture.supplyAsync(() -> {
             MongoCollection<User> collection = mongoDB.getMongoDatabase().getCollection("users", User.class);

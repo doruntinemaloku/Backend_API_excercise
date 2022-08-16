@@ -1,0 +1,21 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly DashboardTest, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / testOnly[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets:backend_api_excersise[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source and 3 Java sources to /Users/doruntinemaloku/Documents/Backend_API_Excersise/target/scala-2.12/classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0mGetting the hostname OprimeKS-Mac-DoruntineM.local was slow (5003.810334 ms). This is likely because the computer's hostname is not set. You can set the hostname with the command: scutil --set HostName "$(scutil --get LocalHostName).local".[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[0mdebug[0m] [0m[0mExporting web-assets-test:backend_api_excersise[0m
+[0m[[0m[31merror[0m] [0m[0mTest [33mDashboardTest[0m.[31mtestRead2[0m failed: expected:<200> but was:<400>, took 17.556 sec[0m
+[0m[[0m[31merror[0m] [0m[0mTest [33mDashboardTest[0m.[31mtestRead[0m failed: expected:<200> but was:<400>, took 11.62 sec[0m
+[0m[[0m[31merror[0m] [0m[0mTest [33mDashboardTest[0m.[31mtestSave[0m failed: expected:<200> but was:<400>, took 11.559 sec[0m
+[0m[[0m[31merror[0m] [0m[0mTest [33mDashboardTest[0m.[31mtestDelete[0m failed: expected:<200> but was:<400>, took 11.985 sec[0m
+[0m[[0m[31merror[0m] [0m[0mTest [33mDashboardTest[0m.[31mtestUpdate[0m failed: expected:<200> but was:<400>, took 11.623 sec[0m
+[0m[[0m[31merror[0m] [0m[0mFailed: Total 5, Failed 5, Errors 0, Passed 0[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	DashboardTest[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtestOnly[0m) sbt.TestsFailedException: Tests unsuccessful[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 74 s (01:14), completed Aug 16, 2022, 9:39:31 AM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(idea-shell, None, None)[0m

@@ -41,7 +41,11 @@ lazy val root = (project in file("."))
       "com.typesafe.akka" %% "akka-http-core" % akkaHTTPVersion,
       "com.typesafe.akka" %% "akka-http2-support" % akkaHTTPVersion,
       "com.typesafe.akka" %% "akka-http-spray-json" % akkaHTTPVersion,
-      "com.typesafe.akka" %% "akka-http" % akkaHTTPVersion
+      "com.typesafe.akka" %% "akka-http" % akkaHTTPVersion,
+
+
+      "org.hibernate" % "hibernate-validator" % "6.1.5.Final",
+      "org.glassfish" % "javax.el" % "3.0.0",
     )
   )
 

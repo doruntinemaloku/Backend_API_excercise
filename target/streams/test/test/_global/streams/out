@@ -1,0 +1,22 @@
+[0m[[0m[0mdebug[0m] [0m[0mjavaOptions: Vector()[0m
+[0m[[0m[0mdebug[0m] [0m[0mForking tests - parallelism = false[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreate a single-thread test executor[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunner for com.novocode.junit.JUnitFramework produced 1 initial tasks for 1 tests.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(DashboardTest, sbt.ForkMain$AnnotatedFingerscan@2bbf4b8b, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0m[34mTest run started[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mDashboardTest[0m.[36mtestRead2[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mDashboardTest[0m.[36mtestRead2[0m finished, took 17.993 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mDashboardTest[0m.[36mtestRead[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mDashboardTest[0m.[36mtestRead[0m finished, took 11.884 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mDashboardTest[0m.[36mtestSave[0m started[0m
+[0m[[0m[31merror[0m] [0m[0mTest [33mDashboardTest[0m.[31mtestSave[0m failed: expected:<Dashboard(name=Automotive, description=optimize intuitive interfaces, parentId=62ea320afc13ae31a1000139, readACL=[62e7dc19bcae4f4a49908dca, 62e90a69e08d17cd567438dd], writeACL=[62e90a69e08d17cd567438dd, 62ea2bbc21982230a035bdc0], children=[], items=[], level=null)> but was:<Dashboard(name=Automotive, description=optimize intuitive interfaces, parentId=62ea320a5840e56c5674c055, readACL=[62e7dc19bcae4f4a49908dca, 62e90a69e08d17cd567438dd], writeACL=[62e90a69e08d17cd567438dd, 62ea2bbc21982230a035bdc0], children=[], items=[], level=null)>, took 12.043 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mDashboardTest[0m.[36mtestSave[0m finished, took 12.044 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mDashboardTest[0m.[36mtestUpdate[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mDashboardTest[0m.[36mtestUpdate[0m finished, took 12.17 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0m[34mTest run finished: [0m[31m1 failed[0m[34m, [0m[34m0 ignored[0m[34m, 4 total, 54.098s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 4 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0mSummary for JUnit not available.[0m
+[0m[[0m[31merror[0m] [0m[0mFailed: Total 4, Failed 1, Errors 0, Passed 3[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	DashboardTest[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m

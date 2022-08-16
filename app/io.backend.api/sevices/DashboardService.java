@@ -34,34 +34,49 @@ public class DashboardService {
     @Inject
     IMongoDB mongoDB;
 
-    public CompletableFuture<List<Dashboard>> read(User user) {
+    /**
+     * Get all dashboards
+     *
+     * @param skip  skips over the specified number of documents
+     * @param limit limits on how many items you want to get form a database list
+     * @param user  authenticate user
+     * @return list of dashboards
+     */
+    public CompletableFuture<List<Dashboard>> read(int skip, int limit, User user) {
         return CompletableFuture.supplyAsync(() -> {
-            try{
-            int skip = 0, limit = 100;
-            List<Dashboard> dashboards = mongoDB.getMongoDatabase()
-                    .getCollection("dashboards", Dashboard.class)
-                    .find(AccessUtils.readAccess(user))
-                    .skip(skip)
-                    .limit(limit)
-                    .into(new ArrayList<>());
+            try {
+                List<Dashboard> dashboards = mongoDB.getMongoDatabase()
+                        .getCollection("dashboards", Dashboard.class)
+                        .find(AccessUtils.readAccess(user))
+                        .skip(skip)
+                        .limit(limit)
+                        .into(new ArrayList<>());
 
-            List<ObjectId> id = dashboards.stream().map(BaseModel::getId).collect(Collectors.toList());
+                List<ObjectId> id = dashboards.stream().map(BaseModel::getId).collect(Collectors.toList());
 
-            List<Content> content = mongoDB.getMongoDatabase().getCollection("contents", Content.class)
-                    .find()
-                    .filter(Filters.in("dashboardId", id))
-                    .into(new ArrayList<>());
+                List<Content> content = mongoDB.getMongoDatabase().getCollection("contents", Content.class)
+                        .find()
+                        .filter(Filters.in("dashboardId", id))
+                        .into(new ArrayList<>());
 
-            dashboards.forEach(x -> x.setItems(content.stream()
-                    .filter(y -> y.getDashboardId().equals(x.getId()))
-                    .collect(Collectors.toList())));
-            return dashboards;}
-            catch(Exception e){
+                dashboards.forEach(x -> x.setItems(content.stream()
+                        .filter(y -> y.getDashboardId().equals(x.getId()))
+                        .collect(Collectors.toList())));
+                return dashboards;
+            } catch (Exception e) {
                 e.printStackTrace();
-            } return null;
+            }
+            return null;
         }, ec.current());
     }
 
+    /**
+     * create new dashboard
+     *
+     * @param dashboard you want to create
+     * @param user      authenticated user
+     * @return the new created dashboard
+     */
     public CompletableFuture<Dashboard> create(Dashboard dashboard, User user) {
         return CompletableFuture.supplyAsync(() -> {
             try {
@@ -79,6 +94,14 @@ public class DashboardService {
         }, ec.current());
     }
 
+    /**
+     * Update dashboard
+     *
+     * @param dashboard you want to update
+     * @param id        dashboardId you want to update
+     * @param user      authanticated user
+     * @return updated dashboard
+     */
     public CompletableFuture<Dashboard> update(Dashboard dashboard, String id, User user) {
         return CompletableFuture.supplyAsync(() -> {
             MongoCollection<Dashboard> collection = mongoDB.getMongoDatabase().getCollection("dashboards", Dashboard.class);
@@ -94,6 +117,14 @@ public class DashboardService {
         }, ec.current());
     }
 
+    /**
+     * Delete a dashboard
+     *
+     * @param dashboard the dashboard you want to delete
+     * @param id dashboardId you want to delete
+     * @param user authenticated user
+     * @return the deleted dashboard
+     */
     public CompletableFuture<Dashboard> delete(Dashboard dashboard, String id, User user) {
         return CompletableFuture.supplyAsync(() -> {
             MongoCollection<Dashboard> collection = mongoDB.getMongoDatabase().getCollection("dashboards", Dashboard.class);
@@ -109,6 +140,10 @@ public class DashboardService {
         }, ec.current());
     }
 
+    /**
+     * Get the Dashboards and their hierarchy
+     * @return return list of Dashboards
+     */
     public CompletableFuture<List<Dashboard>> hierarchy() {
         return CompletableFuture.supplyAsync(() -> {
             try {
@@ -146,8 +181,8 @@ public class DashboardService {
                         .collect(Collectors.toList())));
 
 
-                dashboards.forEach(d->{
-                    List<Dashboard> children= d.getChildren();
+                dashboards.forEach(d -> {
+                    List<Dashboard> children = d.getChildren();
                     List<Dashboard> prinderit = children.stream()
                             .reduce(new ArrayList<>(), (lista, x) -> {
                                 x.setChildren(children.stream()
@@ -161,7 +196,7 @@ public class DashboardService {
 
                     d.setChildren(prinderit);
                 });
-               return dashboards;
+                return dashboards;
             } catch (Exception e) {
                 throw new CompletionException(new RequestException(Http.Status.NOT_FOUND, "Something went wrong. " + e.getMessage()));
             }

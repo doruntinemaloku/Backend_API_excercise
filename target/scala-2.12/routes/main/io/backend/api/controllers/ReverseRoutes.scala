@@ -81,9 +81,9 @@ package io.backend.api.controllers {
 
   
     // @LINE:13
-    def read(): Call = {
+    def read(skip:Int = 0, limit:Int = 50): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "api/dashboard/")
+      Call("GET", _prefix + { _defaultPrefix } + "api/dashboard/" + play.core.routing.queryString(List(if(skip == 0) None else Some(implicitly[play.api.mvc.QueryStringBindable[Int]].unbind("skip", skip)), if(limit == 50) None else Some(implicitly[play.api.mvc.QueryStringBindable[Int]].unbind("limit", limit)))))
     }
   
     // @LINE:15

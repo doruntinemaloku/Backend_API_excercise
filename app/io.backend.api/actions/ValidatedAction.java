@@ -19,7 +19,6 @@ import static play.mvc.Results.badRequest;
 public class ValidatedAction extends Action<Validated> {
 
     @Override
-    @Of(BodyParser.Json.class)
     public CompletionStage<Result> call(Http.Request request) {
         try {
             JsonNode body = request.body().asJson();
@@ -27,14 +26,14 @@ public class ValidatedAction extends Action<Validated> {
 
             String errors = HibernateValidator.validate(object);
             if (!Strings.isNullOrEmpty(errors)) {
-                return CompletableFuture.completedFuture(badRequest(Json.toJson(errors)));
+                return CompletableFuture.completedFuture(badRequest(errors));
             }
 
             return delegate.call(request);
         } catch (Exception ex) {
             ex.printStackTrace();
             ObjectNode response = Json.newObject();
-            response.put("message", "Invalid object supplied, cannot cast to type Dashboard.");
+            response.put("message", "Invalid object supplied, cannot cast to type.");
             return CompletableFuture.completedFuture(badRequest(response));
         }
     }

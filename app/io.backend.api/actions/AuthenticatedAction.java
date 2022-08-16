@@ -53,7 +53,7 @@ public class AuthenticatedAction extends Action<Authenticated> {
         } catch (JWTVerificationException e) {
             return CompletableFuture.completedFuture(forbidden("TOKEN NOT VERIFIED"));
         } catch (Exception e) {
-            return CompletableFuture.completedFuture(internalServerError());
+            return CompletableFuture.completedFuture(badRequest());
         }
     }
 }

@@ -58,7 +58,7 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/authenticate/""", """@io.backend.api.controllers.AuthenticateController@.authenticate(request:Request)"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/dashboard/""", """@io.backend.api.controllers.Dashboard_Contoller@.create(request:Request)"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/dashboard/""", """@io.backend.api.controllers.Dashboard_Contoller@.read(request:Request)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/dashboard/""", """@io.backend.api.controllers.Dashboard_Contoller@.read(skip:Int ?= 0, limit:Int ?= 50, request:Request)"""),
     ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/dashboard/""" + "$" + """id<[^/]+>""", """@io.backend.api.controllers.Dashboard_Contoller@.update(request:Request, id:String)"""),
     ("""DELETE""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/dashboard/""" + "$" + """id<[^/]+>""", """@io.backend.api.controllers.Dashboard_Contoller@.delete(request:Request, id:String)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/dashboard/hierarchy""", """@io.backend.api.controllers.Dashboard_Contoller@.hierarchy(request:Request)"""),
@@ -143,12 +143,12 @@ class Routes(
   private[this] lazy val io_backend_api_controllers_Dashboard_Contoller_read3_invoker = createInvoker(
     
     (req:play.mvc.Http.Request) =>
-      Dashboard_Contoller_2.get.read(fakeValue[play.mvc.Http.Request]),
+      Dashboard_Contoller_2.get.read(fakeValue[Int], fakeValue[Int], fakeValue[play.mvc.Http.Request]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "io.backend.api.controllers.Dashboard_Contoller",
       "read",
-      Seq(classOf[play.mvc.Http.Request]),
+      Seq(classOf[Int], classOf[Int], classOf[play.mvc.Http.Request]),
       "GET",
       this.prefix + """api/dashboard/""",
       """""",
@@ -419,9 +419,9 @@ class Routes(
   
     // @LINE:13
     case io_backend_api_controllers_Dashboard_Contoller_read3_route(params@_) =>
-      call { 
+      call(params.fromQuery[Int]("skip", Some(0)), params.fromQuery[Int]("limit", Some(50))) { (skip, limit) =>
         io_backend_api_controllers_Dashboard_Contoller_read3_invoker.call(
-          req => Dashboard_Contoller_2.get.read(req))
+          req => Dashboard_Contoller_2.get.read(skip, limit, req))
       }
   
     // @LINE:14

@@ -25,6 +25,15 @@ public class ContentService {
     @Inject
     IMongoDB mongoDB;
 
+    /**
+     * Get contents
+     *
+     * @param skip  skips over the specified number of documents
+     * @param limit limits on how many items you want to get form a database list
+     * @param id    dashboardId
+     * @param user  authenticated user
+     * @return list of contents
+     */
     public CompletableFuture<List<Content>> read(int skip, int limit, String id, User user) {
         return CompletableFuture.supplyAsync(() -> {
             return mongoDB.getMongoDatabase()
@@ -37,6 +46,14 @@ public class ContentService {
         }, ec.current());
     }
 
+    /**
+     * Create new content
+     *
+     * @param content the content you want to create
+     * @param id      dashboardId
+     * @param user    authenticated user
+     * @return content you created
+     */
     public CompletableFuture<Content> create(Content content, String id, User user) {
         return CompletableFuture.supplyAsync(() -> {
             try {
@@ -56,6 +73,15 @@ public class ContentService {
         }, ec.current());
     }
 
+    /**
+     * Update a content
+     *
+     * @param content   the content you want to update
+     * @param id        dashboardId
+     * @param contentId of the content you want to update
+     * @param user      authenticated user
+     * @return the updated content
+     */
     public CompletableFuture<Content> update(Content content, String id, String contentId, User user) {
         return CompletableFuture.supplyAsync(() -> {
             MongoCollection<Content> collection = mongoDB.getMongoDatabase().getCollection("contents", Content.class);
@@ -72,6 +98,14 @@ public class ContentService {
         }, ec.current());
     }
 
+    /**
+     * Delete a content
+     *
+     * @param content the content you want to delete
+     * @param id contentId you want to delete
+     * @param user  authenticated user
+     * @return the deleted content
+     */
     public CompletableFuture<Content> delete(Content content, String id, User user) {
         return CompletableFuture.supplyAsync(() -> {
             MongoCollection<Content> collection = mongoDB.getMongoDatabase().getCollection("contents", Content.class);

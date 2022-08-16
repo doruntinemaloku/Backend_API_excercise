@@ -15,6 +15,7 @@ import play.libs.Json;
 import play.libs.concurrent.HttpExecutionContext;
 import play.mvc.Http;
 
+import java.util.Date;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 
@@ -26,6 +27,11 @@ public class AuthenticateService {
     @Inject
     IMongoDB mongoDB;
 
+    /**
+     * authenticates a user
+     * @param user1
+     * @return token as String
+     */
     public CompletableFuture<String> authenticate(User user1) {
         return CompletableFuture.supplyAsync(() -> {
             try {
@@ -47,6 +53,7 @@ public class AuthenticateService {
 
                 return JWT.create()
                         .withClaim("id", user.getId().toString())
+                        .withExpiresAt(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 24))
                         .sign(algorithm);
             } catch (Exception e) {
                 throw new RuntimeException(e);

@@ -1,6 +1,7 @@
 package io.backend.api.controllers;
 
 import io.backend.api.actions.Authenticated;
+import io.backend.api.actions.Validated;
 import io.backend.api.model.Dashboard;
 import io.backend.api.sevices.SerializationService;
 import io.backend.api.utils.DatabaseUtils;
@@ -25,14 +26,11 @@ public class Dashboard_Contoller extends Controller {
      * @param request HTTP request
      * @return
      */
-    public CompletableFuture<Result> read(Http.Request request) {
-        return service.read(ServiceUtils.getUserFrom(request))
+    public CompletableFuture<Result> read(int skip, int limit, Http.Request request) {
+        return service.read(skip, limit, ServiceUtils.getUserFrom(request))
                 .thenCompose((data) -> serializationService.toJsonNode(data))
                 .thenApply(Results::ok)
-                .exceptionally(x -> {
-                    x.printStackTrace();
-                    return DatabaseUtils.throwableToResult(x);
-                });
+                .exceptionally(DatabaseUtils::throwableToResult);
     }
 
     /**
@@ -41,7 +39,7 @@ public class Dashboard_Contoller extends Controller {
      * @param request HTTP request
      * @return
      */
-
+    @Validated(type = Dashboard.class)
     @BodyParser.Of(BodyParser.Json.class)
     public CompletableFuture<Result> create(Http.Request request) {
         return serializationService.parseBodyOfType(request, Dashboard.class)
@@ -58,7 +56,7 @@ public class Dashboard_Contoller extends Controller {
      * @param id      User Id
      * @return
      */
-
+    @Validated(type = Dashboard.class)
     @BodyParser.Of(BodyParser.Json.class)
     public CompletableFuture<Result> update(Http.Request request, String id) {
         return serializationService.parseBodyOfType(request, Dashboard.class)

@@ -2,6 +2,7 @@ package io.backend.api.controllers;
 
 
 import io.backend.api.actions.Authenticated;
+import io.backend.api.actions.Validated;
 import io.backend.api.model.Dashboard;
 import io.backend.api.model.User;
 import io.backend.api.sevices.SerializationService;
@@ -42,7 +43,7 @@ public class User_Controller extends Controller {
      * @param request HTTP request
      * @return
      */
-
+ //   @Validated(type = User.class)
     @BodyParser.Of(BodyParser.Json.class)
     public CompletableFuture<Result> create(Http.Request request) {
         return serializationService.parseBodyOfType(request, User.class)
@@ -59,7 +60,7 @@ public class User_Controller extends Controller {
      * @param id      User Id
      * @return
      */
-
+ //   @Validated(type = User.class)
     @BodyParser.Of(BodyParser.Json.class)
     public CompletableFuture<Result> update(Http.Request request, String id) {
         return serializationService.parseBodyOfType(request, User.class)
